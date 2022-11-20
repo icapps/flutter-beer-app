@@ -26,12 +26,11 @@ import 'package:beer_app/viewmodel/debug/debug_platform_selector_viewmodel.dart'
 import 'package:beer_app/viewmodel/debug/debug_viewmodel.dart' as _i26;
 import 'package:beer_app/viewmodel/global/global_viewmodel.dart' as _i27;
 import 'package:beer_app/viewmodel/license/license_viewmodel.dart' as _i28;
-import 'package:beer_app/viewmodel/login/login_viewmodel.dart' as _i30;
-import 'package:beer_app/viewmodel/splash/splash_viewmodel.dart' as _i31;
+import 'package:beer_app/viewmodel/splash/splash_viewmodel.dart' as _i30;
 import 'package:beer_app/viewmodel/todo/todo_add/todo_add_viewmodel.dart'
-    as _i32;
+    as _i31;
 import 'package:beer_app/viewmodel/todo/todo_list/todo_list_viewmodel.dart'
-    as _i33;
+    as _i32;
 import 'package:beer_app/webservice/todo/todo_service.dart' as _i24;
 import 'package:connectivity_plus/connectivity_plus.dart' as _i21;
 import 'package:connectivity_plus_platform_interface/connectivity_plus_platform_interface.dart'
@@ -190,14 +189,6 @@ class MockMainNavigator extends _i1.Mock implements _i5.MainNavigator {
   void goToSplash() => super.noSuchMethod(
         Invocation.method(
           #goToSplash,
-          [],
-        ),
-        returnValueForMissingStub: null,
-      );
-  @override
-  void goToLogin() => super.noSuchMethod(
-        Invocation.method(
-          #goToLogin,
           [],
         ),
         returnValueForMissingStub: null,
@@ -2518,123 +2509,10 @@ class MockLicenseViewModel extends _i1.Mock implements _i28.LicenseViewModel {
       );
 }
 
-/// A class which mocks [LoginViewModel].
-///
-/// See the documentation for Mockito's code generation for more information.
-class MockLoginViewModel extends _i1.Mock implements _i30.LoginViewModel {
-  MockLoginViewModel() {
-    _i1.throwOnMissingStub(this);
-  }
-
-  @override
-  bool get isLoginEnabled => (super.noSuchMethod(
-        Invocation.getter(#isLoginEnabled),
-        returnValue: false,
-      ) as bool);
-  @override
-  bool get isLoading => (super.noSuchMethod(
-        Invocation.getter(#isLoading),
-        returnValue: false,
-      ) as bool);
-  @override
-  bool get disposed => (super.noSuchMethod(
-        Invocation.getter(#disposed),
-        returnValue: false,
-      ) as bool);
-  @override
-  bool get hasListeners => (super.noSuchMethod(
-        Invocation.getter(#hasListeners),
-        returnValue: false,
-      ) as bool);
-  @override
-  _i6.Future<void> init() => (super.noSuchMethod(
-        Invocation.method(
-          #init,
-          [],
-        ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
-  @override
-  void onEmailUpdated(String? email) => super.noSuchMethod(
-        Invocation.method(
-          #onEmailUpdated,
-          [email],
-        ),
-        returnValueForMissingStub: null,
-      );
-  @override
-  void onPasswordUpdated(String? password) => super.noSuchMethod(
-        Invocation.method(
-          #onPasswordUpdated,
-          [password],
-        ),
-        returnValueForMissingStub: null,
-      );
-  @override
-  _i6.Future<void> onLoginClicked() => (super.noSuchMethod(
-        Invocation.method(
-          #onLoginClicked,
-          [],
-        ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
-  @override
-  void dispose() => super.noSuchMethod(
-        Invocation.method(
-          #dispose,
-          [],
-        ),
-        returnValueForMissingStub: null,
-      );
-  @override
-  void addListener(_i12.VoidCallback? listener) => super.noSuchMethod(
-        Invocation.method(
-          #addListener,
-          [listener],
-        ),
-        returnValueForMissingStub: null,
-      );
-  @override
-  void removeListener(_i12.VoidCallback? listener) => super.noSuchMethod(
-        Invocation.method(
-          #removeListener,
-          [listener],
-        ),
-        returnValueForMissingStub: null,
-      );
-  @override
-  void registerDispose(_i17.DisposeAware? toDispose) => super.noSuchMethod(
-        Invocation.method(
-          #registerDispose,
-          [toDispose],
-        ),
-        returnValueForMissingStub: null,
-      );
-  @override
-  void registerDisposeStream<T>(_i6.StreamSubscription<T>? subscription) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #registerDisposeStream,
-          [subscription],
-        ),
-        returnValueForMissingStub: null,
-      );
-  @override
-  void notifyListeners() => super.noSuchMethod(
-        Invocation.method(
-          #notifyListeners,
-          [],
-        ),
-        returnValueForMissingStub: null,
-      );
-}
-
 /// A class which mocks [SplashViewModel].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSplashViewModel extends _i1.Mock implements _i31.SplashViewModel {
+class MockSplashViewModel extends _i1.Mock implements _i30.SplashViewModel {
   MockSplashViewModel() {
     _i1.throwOnMissingStub(this);
   }
@@ -2712,7 +2590,7 @@ class MockSplashViewModel extends _i1.Mock implements _i31.SplashViewModel {
 /// A class which mocks [TodoAddViewModel].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockTodoAddViewModel extends _i1.Mock implements _i32.TodoAddViewModel {
+class MockTodoAddViewModel extends _i1.Mock implements _i31.TodoAddViewModel {
   MockTodoAddViewModel() {
     _i1.throwOnMissingStub(this);
   }
@@ -2811,7 +2689,7 @@ class MockTodoAddViewModel extends _i1.Mock implements _i32.TodoAddViewModel {
 /// A class which mocks [TodoListViewModel].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockTodoListViewModel extends _i1.Mock implements _i33.TodoListViewModel {
+class MockTodoListViewModel extends _i1.Mock implements _i32.TodoListViewModel {
   MockTodoListViewModel() {
     _i1.throwOnMissingStub(this);
   }

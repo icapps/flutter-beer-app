@@ -1,8 +1,3 @@
-import 'package:dio/dio.dart';
-import 'package:drift/drift.dart';
-import 'package:drift/native.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:beer_app/database/beer_app_database.dart';
 import 'package:beer_app/database/todo/todo_dao_storage.dart';
 import 'package:beer_app/di/environments.dart';
@@ -24,11 +19,15 @@ import 'package:beer_app/viewmodel/debug/debug_platform_selector_viewmodel.dart'
 import 'package:beer_app/viewmodel/debug/debug_viewmodel.dart';
 import 'package:beer_app/viewmodel/global/global_viewmodel.dart';
 import 'package:beer_app/viewmodel/license/license_viewmodel.dart';
-import 'package:beer_app/viewmodel/login/login_viewmodel.dart';
 import 'package:beer_app/viewmodel/splash/splash_viewmodel.dart';
 import 'package:beer_app/viewmodel/todo/todo_add/todo_add_viewmodel.dart';
 import 'package:beer_app/viewmodel/todo/todo_list/todo_list_viewmodel.dart';
 import 'package:beer_app/webservice/todo/todo_service.dart';
+import 'package:dio/dio.dart';
+import 'package:drift/drift.dart';
+import 'package:drift/native.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get_it/get_it.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
@@ -142,9 +141,6 @@ abstract class RegisterModule {
 
   @singleton
   LicenseViewModel get getLicenseViewModel => _initVM(MockLicenseViewModel());
-
-  @singleton
-  LoginViewModel get getLoginViewModel => _initVM(MockLoginViewModel());
 
   @singleton
   SplashViewModel get getSplashViewModel => _initVM(MockSplashViewModel());

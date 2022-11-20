@@ -100,6 +100,12 @@ Now we can add the route to the `MainNavigator` in `lib/navigator/main_navigator
 ...
 ```
 
+You will also need to add `goToLogin()` in `MainNavigator`:
+
+```dart
+  void goToLogin() async => Get.offNamed<void>(LoginScreen.routeName);
+```
+
 To navigate automatically to the `LoginScreen`, we need to update the SplashViewModel. Open `viewmodel/splash/splash_viewmodel.dart` and add the following code to the `init` method.
 
 ```dart
@@ -153,7 +159,7 @@ BeerAppInputField(
 ),
 ```
 
-_Note:_ `onChanged` requires a function. You can enter the following values: `(value) { print(value); }`, `(value) => print(value)` or simply provide the print function itself `onChanged: print,`. All of these are valid, to have a more clear codebase we prefer the last option.
+*Note: `onChanged` requires a function. You can enter the following values: `(value) { print(value); }`, `(value) => print(value)` or simply provide the print function itself `onChanged: print,`. All of these are valid, to have a more clear codebase we prefer the last option.*
 
 When you enter text in the field, you should see the value printed in the console:
 
@@ -276,7 +282,85 @@ You can expand the login screen with more functionality. For example show a load
 
 ### Step 6: Login call
 
+We are almost complete with the login, the next step is to add the login call. API calls contain a lot of boiler plate, so for this step we will use quite a lot of code generation. First is the response model. Open `config.yaml` and add the following code:
+
+```yaml
+LoginResponse:
+  path: webservice/login
+  properties:
+    access_token: string
+    refresh_token: string
+```
+
+Running `tool/model_generator.sh` will then generate the `LoginResponse` model. This model contains the `access_token` and `refresh_token` fields. These are the fields that we need to store in the `LocalStorage`. It will also generate JSON convertion code for this model.
+
+*Note: For more information about the `config.yaml` file and model generation, take a look at [model_generator](https://pub.dev/packages/model_generator).*
+
+*Note: If the model_generator script ends with `pub finished with exit code 65` you need to run `./tool/build_runner_build.sh` manually. `model_generator` will try to run build_runner, but uses the default flutter instance and not fvm. So if these are incompatible the model_generator will show an error. Model generator will still be successful regardless of this (unless you see a different error ofcourse).*
+
+Now we can create our abstract class for the `LoginRepository`. Create a new file `service/login/login_service.dart` and add the following code:
+
+```dart
+abstract class LoginService {
+  Future<LoginResponse> login(String email, String password);
+}
+```
+
+Then create a new file `service/login/login_webservice.dart` and add the following code:
+
+```dart
+part 'login_webservice.g.dart';
+
+@Singleton(as: LoginService)
+@RestApi()
+abstract class LoginWebService extends LoginService {
+  @factoryMethod
+  factory LoginWebService(Dio dio) = _LoginWebService;
+
+  @override
+  @POST('/login')
+  Future<LoginResponse> login(String email, String password);
+}
+```
+
+You need to rerun the `tool/build_runner_build.sh` script to generate the `_LoginWebService` class which includes the actual API code.
+
+TODO: Update body and endpoint
+
+The final step is to add the `LoginService` to the `LoginRepository`. By now you should know how to add the service to the repository. If not, look at `AuthStorage` inside the `LoginRepository` class.
+
+Try to implement the `login` function of the `LoginRepository` yourself. In the end it should look something like this:
+
+```dart
+Future<void> login({required String email, required String password}) async {
+  final tokens = await _loginService.login(email, password);
+  await _storage.saveUserCredentials(accessToken: tokens.accessToken, refreshToken: tokens.refreshToken);
+}
+```
+
+Now the login should work. You can test this by running the app and logging in with the credentials provided above. If you implemented the error handling in the `LoginViewModel` you can also test this now by providing incorrect credentials.
+
+If you are testing on a device/emulator and want to login again, you can clear the app storage to reset the app or uninstall and reinstall the app.
+
+### Step 7: Beers overview
+
+We've gone through everything we need to know to create the beers overview screen. This screen will show a list of beers. We will use a `BeerRepository` to get the beers. The `BeerRepository` will use a `BeerService` to get the beers from the API. The `BeerService` will use a `BeerWebService` to make the actual API call.
+
+First create a model for the beer in `config.yaml`. See the swagger documentation to see the fields of the beer.
+
+Second, create a `BeersOverviewScreen` widget. Change the `TodoListScreen()` on the HomeScreen to `BeersOverviewScreen()`.
+
+Add a list in the `BeersOverviewScreen` widget (hint, use `ListView.builder`). Hardcode some beers in the list for now. Then create a `BeerItem` widget that takes a `Beer` as a parameter. This widget should show the name of the beer and an image.
+
+If this works, create a `BeersOverviewViewModel` and add it to the `BeersPage` widget. The `BeersOverviewViewModel` should load the beers (first hardcoded like you did in `BeersOverviewScreen`). Hint: don't forget to run `tool/build_runner_build.sh` after adding the `@injectable` annotation.
+
+Create a Repository and Service for the beers. Load the beers from the API and see if you can show the beers in the `BeersOverviewScreen`.
+
 ## Extra
+
+### Logout
+
+To logout, we just need to clear the `LocalStorage`. This can be done by calling the `clear` function of the `LocalStorage`. Add a button in the app and call this function when the button is pressed.
 
 ### Add LoginGuard and AuthenticationGuards
 
@@ -304,3 +388,62 @@ Transform this to a `LoginGuard` and a `AuthenticationGuard` and add them to the
       middlewares: [LoginGuard()],
     ),
 ```
+
+### Refresh token
+
+There is a `NetworkRefreshInterceptor` that will automatically try to refresh the access token when you do a call that returns an `Unauthorized` response. This is done by calling the `refresh` function of the `RefreshRepository`. You will see the following code in the `RefreshRepository`:
+
+```dart
+await _authStorage.getRefreshToken();
+// TODO implement refresh call
+// await _authStoring.saveRefreshToken(refreshToken: result.refreshToken, accessToken: result.accessToken);
+throw UnimplementedError('No implementation for the refresh in the refresh repository');
+```
+
+Implement the refresh call and update the above code to refresh expired tokens.
+
+### Save list to database
+
+Now every time you open the overview screen, we do an API call to get the beers. This is not very efficient. The better way of doing this is doing an API call after a user logs in and/or on the splash screen. Then we can save the beers to the database. This way we can show the beers from the database when the user opens the overview screen.
+
+First you need to create a Table. See `DbTodoTable` for inspiration. Note: you need to add your table to `BeerAppDatabase` annotation and run `./tool/build_runner_build.sh` to generate the database models. Then add an extension on the database model and our generated model.
+
+To save and load the beers from the database, you need a dao. See `TodoDaoStorage` for more information.
+
+Now you can save the beers to the database after a user logs in. You can load the beers from the database in the `BeersOverviewViewModel`.
+
+#### Stream
+
+If you use a stream in your BeersDao, you can listen to any changes in the database. This way you can update the UI automatically when the database changes. This is a very powerful feature.
+
+### Switch between list and grid
+
+You have more options than a `ListView.builder`. Another great way to visualize a list is a `GridView.builder`. You can add this and switch between a list and a grid view. Add a button to the `BeersOverviewScreen` that switches between the list and grid view.
+
+### Add a beer detail
+
+There are two options for this. When you click on a beer, you can go to a new screen with the details of the beer. Or you can add a bottom sheet (or dialog) that shows the details of the beer. Feel free to try both.
+
+### Add new beer
+
+Create a new page that allows the user to add a new beer. Add a Floating Action Button to the `BeersOverviewScreen` that opens this page. 
+
+If you've implemented a database with a Stream, you can add the new beer to the database and the UI will automatically update.
+
+Otherwise you can return the beer from the new beer page and add it to the list of beers in the `BeersOverviewViewModel`.
+
+### Tests
+
+You will notice that there are quite a few tests in the project. You can run the tests by running `fvm flutter test` in the root of the project. Since you've added a lot of new code, the current tests will likely fail. Try to fix the tests and add new tests for the new code you've added.
+
+### Fastlane
+
+The project uses Fastlane to automate the build process. You can run the following commands:
+
+```bash
+fastlane ci_alpha
+```
+
+This will build alpha versions of the app for Android and iOS. You can find the APK and IPA in the `build` folder.
+
+It can also be configured to upload directly to appcenter. We use this script on our build server, so it is automatically build and uploaded to appcenter.

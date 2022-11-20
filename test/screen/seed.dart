@@ -9,7 +9,6 @@ import 'package:beer_app/util/locale/localization_keys.dart';
 import 'package:beer_app/viewmodel/debug/debug_viewmodel.dart';
 import 'package:beer_app/viewmodel/global/global_viewmodel.dart';
 import 'package:beer_app/viewmodel/license/license_viewmodel.dart';
-import 'package:beer_app/viewmodel/login/login_viewmodel.dart';
 import 'package:beer_app/viewmodel/todo/todo_add/todo_add_viewmodel.dart';
 import 'package:beer_app/viewmodel/todo/todo_list/todo_list_viewmodel.dart';
 import 'package:mockito/mockito.dart';
@@ -59,12 +58,6 @@ void seedsLicenses() {
         repository: 'repository$i',
       ),
   ]);
-}
-
-void seedLoginViewModel() {
-  final loginViewModel = getIt<LoginViewModel>();
-  when(loginViewModel.isLoading).thenReturn(false);
-  when(loginViewModel.isLoginEnabled).thenReturn(true);
 }
 
 void seedGlobalViewModel() {

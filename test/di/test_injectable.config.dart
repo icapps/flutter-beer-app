@@ -6,39 +6,38 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:beer_app/database/beer_app_database.dart' as _i4;
-import 'package:beer_app/database/todo/todo_dao_storage.dart' as _i24;
-import 'package:beer_app/navigator/main_navigator.dart' as _i18;
+import 'package:beer_app/database/todo/todo_dao_storage.dart' as _i23;
+import 'package:beer_app/navigator/main_navigator.dart' as _i17;
 import 'package:beer_app/repository/debug/debug_repository.dart' as _i7;
 import 'package:beer_app/repository/locale/locale_repository.dart' as _i14;
 import 'package:beer_app/repository/login/login_repository.dart' as _i16;
-import 'package:beer_app/repository/refresh/refresh_repository.dart' as _i19;
+import 'package:beer_app/repository/refresh/refresh_repository.dart' as _i18;
 import 'package:beer_app/repository/secure_storage/auth/auth_storage.dart'
     as _i3;
-import 'package:beer_app/repository/secure_storage/secure_storage.dart' as _i20;
+import 'package:beer_app/repository/secure_storage/secure_storage.dart' as _i19;
 import 'package:beer_app/repository/shared_prefs/local/local_storage.dart'
     as _i13;
-import 'package:beer_app/repository/todo/todo_repository.dart' as _i26;
+import 'package:beer_app/repository/todo/todo_repository.dart' as _i25;
 import 'package:beer_app/util/locale/localization.dart' as _i15;
 import 'package:beer_app/viewmodel/debug/debug_platform_selector_viewmodel.dart'
     as _i6;
 import 'package:beer_app/viewmodel/debug/debug_viewmodel.dart' as _i8;
 import 'package:beer_app/viewmodel/global/global_viewmodel.dart' as _i11;
 import 'package:beer_app/viewmodel/license/license_viewmodel.dart' as _i12;
-import 'package:beer_app/viewmodel/login/login_viewmodel.dart' as _i17;
-import 'package:beer_app/viewmodel/splash/splash_viewmodel.dart' as _i22;
+import 'package:beer_app/viewmodel/splash/splash_viewmodel.dart' as _i21;
 import 'package:beer_app/viewmodel/todo/todo_add/todo_add_viewmodel.dart'
-    as _i23;
+    as _i22;
 import 'package:beer_app/viewmodel/todo/todo_list/todo_list_viewmodel.dart'
-    as _i25;
-import 'package:beer_app/webservice/todo/todo_service.dart' as _i27;
+    as _i24;
+import 'package:beer_app/webservice/todo/todo_service.dart' as _i26;
 import 'package:dio/dio.dart' as _i9;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i10;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:icapps_architecture/icapps_architecture.dart' as _i5;
 import 'package:injectable/injectable.dart' as _i2;
-import 'package:shared_preferences/shared_preferences.dart' as _i21;
+import 'package:shared_preferences/shared_preferences.dart' as _i20;
 
-import 'test_injectable.dart' as _i28;
+import 'test_injectable.dart' as _i27;
 
 const String _test = 'test';
 // ignore_for_file: unnecessary_lambdas
@@ -75,23 +74,22 @@ _i1.GetIt $initTestGetIt(
   gh.singleton<_i14.LocaleRepository>(registerModule.getLocaleRepo);
   gh.singleton<_i15.Localization>(registerModule.getLocalization);
   gh.singleton<_i16.LoginRepository>(registerModule.getLoginRepo);
-  gh.singleton<_i17.LoginViewModel>(registerModule.getLoginViewModel);
-  gh.singleton<_i18.MainNavigator>(
+  gh.singleton<_i17.MainNavigator>(
     registerModule.getMainNavigator,
     registerFor: {_test},
   );
-  gh.singleton<_i19.RefreshRepository>(registerModule.getRefreshRepo);
-  gh.singleton<_i20.SecureStorage>(registerModule.getSecureStoring);
+  gh.singleton<_i18.RefreshRepository>(registerModule.getRefreshRepo);
+  gh.singleton<_i19.SecureStorage>(registerModule.getSecureStoring);
   gh.singleton<_i5.SharedPreferenceStorage>(
       registerModule.getSharedPrefsStoring);
-  gh.singleton<_i21.SharedPreferences>(registerModule.getSharedPreferences);
-  gh.singleton<_i22.SplashViewModel>(registerModule.getSplashViewModel);
-  gh.singleton<_i23.TodoAddViewModel>(registerModule.getTodoAddViewModel);
-  gh.singleton<_i24.TodoDaoStorage>(registerModule.getTodoDaoStoring);
-  gh.singleton<_i25.TodoListViewModel>(registerModule.getTodoListViewModel);
-  gh.singleton<_i26.TodoRepository>(registerModule.getTodoRepo);
-  gh.singleton<_i27.TodoService>(registerModule.getTodoService);
+  gh.singleton<_i20.SharedPreferences>(registerModule.getSharedPreferences);
+  gh.singleton<_i21.SplashViewModel>(registerModule.getSplashViewModel);
+  gh.singleton<_i22.TodoAddViewModel>(registerModule.getTodoAddViewModel);
+  gh.singleton<_i23.TodoDaoStorage>(registerModule.getTodoDaoStoring);
+  gh.singleton<_i24.TodoListViewModel>(registerModule.getTodoListViewModel);
+  gh.singleton<_i25.TodoRepository>(registerModule.getTodoRepo);
+  gh.singleton<_i26.TodoService>(registerModule.getTodoService);
   return get;
 }
 
-class _$RegisterModule extends _i28.RegisterModule {}
+class _$RegisterModule extends _i27.RegisterModule {}

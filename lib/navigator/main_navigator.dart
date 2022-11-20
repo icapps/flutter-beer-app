@@ -1,12 +1,8 @@
-import 'package:drift/drift.dart';
-import 'package:drift_db_viewer/drift_db_viewer.dart';
-import 'package:flutter/material.dart';
 import 'package:beer_app/model/snackbar/snackbar_data.dart';
 import 'package:beer_app/screen/debug/debug_platform_selector_screen.dart';
 import 'package:beer_app/screen/debug/debug_screen.dart';
 import 'package:beer_app/screen/home/home_screen.dart';
 import 'package:beer_app/screen/license/license_screen.dart';
-import 'package:beer_app/screen/login/login_screen.dart';
 import 'package:beer_app/screen/splash/splash_screen.dart';
 import 'package:beer_app/screen/theme_mode/theme_mode_selector.dart';
 import 'package:beer_app/screen/todo/todo_add/todo_add_screen.dart';
@@ -15,6 +11,9 @@ import 'package:beer_app/util/snackbar/error_util.dart';
 import 'package:beer_app/util/snackbar/snackbar_util.dart';
 import 'package:beer_app/widget/general/flavor_banner.dart';
 import 'package:beer_app/widget/general/navigator_page/base_page.dart';
+import 'package:drift/drift.dart';
+import 'package:drift_db_viewer/drift_db_viewer.dart';
+import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:injectable/injectable.dart';
 
@@ -34,10 +33,6 @@ class MainNavigator {
     BasePage<void>(
       name: SplashScreen.routeName,
       page: () => const FlavorBanner(child: SplashScreen()),
-    ),
-    BasePage<void>(
-      name: LoginScreen.routeName,
-      page: () => const FlavorBanner(child: LoginScreen()),
     ),
     BasePage<void>(
       name: HomeScreen.routeName,
@@ -68,8 +63,6 @@ class MainNavigator {
   ];
 
   void goToSplash() async => Get.offNamed<void>(SplashScreen.routeName);
-
-  void goToLogin() async => Get.offNamed<void>(LoginScreen.routeName);
 
   void goToHome() async => Get.offNamed<void>(HomeScreen.routeName);
 
