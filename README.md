@@ -362,7 +362,7 @@ Create a Repository and Service for the beers. Load the beers from the API and s
 
 To logout, we just need to clear the `LocalStorage`. This can be done by calling the `clear` function of the `LocalStorage`. Add a button in the app and call this function when the button is pressed.
 
-### Add LoginGuard and AuthenticationGuards
+### LoginGuard and AuthenticationGuards
 
 To automatically redirect the user to the login screen when the user is not logged in, we can use the `AuthenticationGuard`. This guard checks if the user is logged in and if not, it redirects the user to the login screen.
 
@@ -431,6 +431,10 @@ Create a new page that allows the user to add a new beer. Add a Floating Action 
 If you've implemented a database with a Stream, you can add the new beer to the database and the UI will automatically update.
 
 Otherwise you can return the beer from the new beer page and add it to the list of beers in the `BeersOverviewViewModel`.
+
+### Theming
+
+The app already contains code for theming and light/dark mode. Add some new colors to the theme and use them in the app. You can also add a button to switch between light and dark mode.
 
 ### Tests
 
