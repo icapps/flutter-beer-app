@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/model/exceptions/un_authorized_error.dart';
-import 'package:flutter_template/repository/refresh/refresh_repository.dart';
-import 'package:flutter_template/repository/secure_storage/auth/auth_storage.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/model/exceptions/un_authorized_error.dart';
+import 'package:beer_app/repository/refresh/refresh_repository.dart';
+import 'package:beer_app/repository/secure_storage/auth/auth_storage.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 import 'package:injectable/injectable.dart';
 

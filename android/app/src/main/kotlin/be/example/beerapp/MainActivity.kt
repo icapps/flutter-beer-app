@@ -1,4 +1,4 @@
-package com.icapps.fluttertemplate
+package be.example.beerapp
 
 import android.os.Build
 import android.os.Bundle

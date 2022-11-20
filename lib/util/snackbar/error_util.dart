@@ -1,8 +1,8 @@
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/navigator/main_navigator.dart';
-import 'package:flutter_template/util/env/flavor_config.dart';
-import 'package:flutter_template/util/extension/localization_extension.dart';
-import 'package:flutter_template/util/locale/localization_keys.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/navigator/main_navigator.dart';
+import 'package:beer_app/util/env/flavor_config.dart';
+import 'package:beer_app/util/extension/localization_extension.dart';
+import 'package:beer_app/util/locale/localization_keys.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 import 'package:injectable/injectable.dart';
 
@@ -30,7 +30,7 @@ class ErrorUtil {
     } else if (error is LocalizedError) {
       key = error.getLocalizedKey();
     } else {
-      logger.warning('Caught an error that is not handled by the FlutterTemplateError $error');
+      logger.warning('Caught an error that is not handled by the BeerAppError $error');
       key = LocalizationKeys.errorGeneral;
     }
     showErrorWithLocaleKey(key);

@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:flutter_template/model/exceptions/internal_server_error.dart';
-import 'package:flutter_template/util/interceptor/network_log_interceptor.dart';
+import 'package:beer_app/model/exceptions/internal_server_error.dart';
+import 'package:beer_app/util/interceptor/network_log_interceptor.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../di/test_injectable.dart';

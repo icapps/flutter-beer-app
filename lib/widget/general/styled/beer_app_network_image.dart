@@ -3,12 +3,12 @@ import 'dart:typed_data';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/util/cache/cache_controlling.dart';
-import 'package:flutter_template/util/env/flavor_config.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/util/cache/cache_controlling.dart';
+import 'package:beer_app/util/env/flavor_config.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 
-class FlutterTemplateNetworkImage extends StatelessWidget {
+class BeerAppNetworkImage extends StatelessWidget {
   final String? url;
   final String? fallbackUrl;
   final BoxFit fit;
@@ -16,7 +16,7 @@ class FlutterTemplateNetworkImage extends StatelessWidget {
   final double? width;
   final Duration? duration;
 
-  const FlutterTemplateNetworkImage({
+  const BeerAppNetworkImage({
     required this.url,
     this.fallbackUrl,
     this.fit = BoxFit.cover,
@@ -45,7 +45,7 @@ class FlutterTemplateNetworkImage extends StatelessWidget {
         return SizedBox(
           height: imgHeight,
           width: imgWidth,
-          child: _FlutterTemplateBetterNetworkImage(
+          child: _BeerAppBetterNetworkImage(
             imageUrl: correctUrl,
             height: imgHeight,
             width: imgWidth,
@@ -58,14 +58,14 @@ class FlutterTemplateNetworkImage extends StatelessWidget {
   }
 }
 
-class _FlutterTemplateBetterNetworkImage extends StatefulWidget {
+class _BeerAppBetterNetworkImage extends StatefulWidget {
   final String? imageUrl;
   final BoxFit fit;
   final double? width;
   final double? height;
   final Widget placeholder;
 
-  const _FlutterTemplateBetterNetworkImage({
+  const _BeerAppBetterNetworkImage({
     required this.imageUrl,
     required this.fit,
     required this.width,
@@ -74,10 +74,10 @@ class _FlutterTemplateBetterNetworkImage extends StatefulWidget {
   });
 
   @override
-  _FlutterTemplateBetterNetworkImageState createState() => _FlutterTemplateBetterNetworkImageState();
+  _BeerAppBetterNetworkImageState createState() => _BeerAppBetterNetworkImageState();
 }
 
-class _FlutterTemplateBetterNetworkImageState extends State<_FlutterTemplateBetterNetworkImage> {
+class _BeerAppBetterNetworkImageState extends State<_BeerAppBetterNetworkImage> {
   final _cacheController = getIt.get<CacheControlling>();
 
   var _isLoading = false;
@@ -96,7 +96,7 @@ class _FlutterTemplateBetterNetworkImageState extends State<_FlutterTemplateBett
   }
 
   @override
-  void didUpdateWidget(_FlutterTemplateBetterNetworkImage oldWidget) {
+  void didUpdateWidget(_BeerAppBetterNetworkImage oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.imageUrl != widget.imageUrl) {
       _getImage();

@@ -1,6 +1,6 @@
 import 'dart:io';
 
-const packageName = 'flutter_template';
+const packageName = 'beer_app';
 
 void main() {
   Logger.debug('====');

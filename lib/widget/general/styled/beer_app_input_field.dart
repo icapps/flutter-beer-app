@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/widget/provider/data_provider_widget.dart';
+import 'package:beer_app/widget/provider/data_provider_widget.dart';
 
-class FlutterTemplateInputField extends StatelessWidget {
+class BeerAppInputField extends StatelessWidget {
   final String hint;
   final bool enabled;
   final ValueChanged<String> onChanged;
   final TextEditingController? controller;
 
-  const FlutterTemplateInputField({
+  const BeerAppInputField({
     required this.hint,
     required this.onChanged,
     this.enabled = true,

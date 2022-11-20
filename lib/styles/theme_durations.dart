@@ -1,4 +1,4 @@
-import 'package:flutter_template/util/env/flavor_config.dart';
+import 'package:beer_app/util/env/flavor_config.dart';
 
 class ThemeDurations {
   ThemeDurations._();

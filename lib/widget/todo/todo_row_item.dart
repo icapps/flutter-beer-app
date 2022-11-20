@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/styles/theme_dimens.dart';
-import 'package:flutter_template/widget/general/styled/flutter_template_checkbox.dart';
-import 'package:flutter_template/widget/provider/data_provider_widget.dart';
+import 'package:beer_app/styles/theme_dimens.dart';
+import 'package:beer_app/widget/general/styled/beer_app_checkbox.dart';
+import 'package:beer_app/widget/provider/data_provider_widget.dart';
 
 class TodoRowItem extends StatelessWidget {
   final String title;
@@ -34,7 +34,7 @@ class TodoRowItem extends StatelessWidget {
                   style: theme.coreTextTheme.bodyNormal,
                 ),
               ),
-              FlutterTemplateCheckBox(
+              BeerAppCheckBox(
                 value: value,
                 onChanged: onChanged,
               ),

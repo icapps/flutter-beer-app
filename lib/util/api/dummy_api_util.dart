@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:flutter_template/util/env/flavor_config.dart';
+import 'package:beer_app/util/env/flavor_config.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 
 class DummyApiUtil {

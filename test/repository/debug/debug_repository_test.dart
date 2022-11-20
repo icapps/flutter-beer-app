@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/repository/debug/debug_repository.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/repository/debug/debug_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 import 'package:mockito/mockito.dart';

@@ -1,6 +1,6 @@
 #include "Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"
 #include "Shared.xcconfig"
-PRODUCT_BUNDLE_IDENTIFIER=com.icapps.fluttertemplate.alpha
-CFBundleName=Flutter Template Alpha
+PRODUCT_BUNDLE_IDENTIFIER=be.example.beerapp.alpha
+CFBundleName=Beer App Alpha
 FLUTTER_TARGET=lib/main_alpha.dart
-PROVISIONING_PROFILE_SPECIFIER=Flutter Template Alpha
+PROVISIONING_PROFILE_SPECIFIER=Beer App Alpha

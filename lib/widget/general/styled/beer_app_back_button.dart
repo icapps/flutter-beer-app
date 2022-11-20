@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/styles/theme_assets.dart';
-import 'package:flutter_template/styles/theme_colors.dart';
-import 'package:flutter_template/util/keys.dart';
-import 'package:flutter_template/widget/general/action/action_item.dart';
-import 'package:flutter_template/widget/provider/data_provider_widget.dart';
+import 'package:beer_app/styles/theme_assets.dart';
+import 'package:beer_app/styles/theme_colors.dart';
+import 'package:beer_app/util/keys.dart';
+import 'package:beer_app/widget/general/action/action_item.dart';
+import 'package:beer_app/widget/provider/data_provider_widget.dart';
 
-class FlutterTemplateBackButton extends StatelessWidget {
+class BeerAppBackButton extends StatelessWidget {
   final VoidCallback? onClick;
   final bool fullScreen;
   final bool isLight;
 
-  const FlutterTemplateBackButton.light({
+  const BeerAppBackButton.light({
     required this.onClick,
     this.fullScreen = false,
     Key? key,
   })  : isLight = true,
         super(key: key);
 
-  const FlutterTemplateBackButton.dark({
+  const BeerAppBackButton.dark({
     required this.onClick,
     this.fullScreen = false,
     Key? key,

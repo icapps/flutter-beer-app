@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:file_local_storage_inspector/file_local_storage_inspector.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:flutter_template/di/injectable.dart';
+import 'package:beer_app/di/injectable.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:preferences_local_storage_inspector/preferences_local_storage_inspector.dart';
@@ -28,7 +28,7 @@ Future<void> _initLocalStorageInspector(
   if (!kDebugMode) return;
 
   final driver = StorageServerDriver(
-    bundleId: 'com.icapps.flutter_template',
+    bundleId: 'com.icapps.beer_app',
     port: 0,
     icon: 'flutter',
   );

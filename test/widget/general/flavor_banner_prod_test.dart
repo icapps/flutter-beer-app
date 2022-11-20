@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/util/env/flavor_config.dart';
-import 'package:flutter_template/widget/general/flavor_banner.dart';
+import 'package:beer_app/util/env/flavor_config.dart';
+import 'package:beer_app/widget/general/flavor_banner.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../di/test_injectable.dart';

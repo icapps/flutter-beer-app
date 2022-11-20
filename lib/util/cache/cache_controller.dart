@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
-import 'package:flutter_template/util/cache/cache_controlling.dart';
+import 'package:beer_app/util/cache/cache_controlling.dart';
 import 'package:injectable/injectable.dart';
 
 @Singleton(as: CacheControlling)

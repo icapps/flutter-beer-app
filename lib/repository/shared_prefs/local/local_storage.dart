@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/repository/secure_storage/auth/auth_storage.dart';
+import 'package:beer_app/repository/secure_storage/auth/auth_storage.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 import 'package:injectable/injectable.dart';
 

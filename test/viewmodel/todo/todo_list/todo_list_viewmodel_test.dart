@@ -1,10 +1,10 @@
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/model/exceptions/general_network_error.dart';
-import 'package:flutter_template/model/webservice/todo/todo.dart';
-import 'package:flutter_template/navigator/main_navigator.dart';
-import 'package:flutter_template/repository/todo/todo_repository.dart';
-import 'package:flutter_template/util/locale/localization_keys.dart';
-import 'package:flutter_template/viewmodel/todo/todo_list/todo_list_viewmodel.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/model/exceptions/general_network_error.dart';
+import 'package:beer_app/model/webservice/todo/todo.dart';
+import 'package:beer_app/navigator/main_navigator.dart';
+import 'package:beer_app/repository/todo/todo_repository.dart';
+import 'package:beer_app/util/locale/localization_keys.dart';
+import 'package:beer_app/viewmodel/todo/todo_list/todo_list_viewmodel.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -89,7 +89,7 @@ void main() {
         verifyNoMoreInteractions(todoRepo);
         verifyZeroInteractions(navigator);
       });
-      test('TodoListViewModel onDownloadClicked with FlutterTemplateError', () async {
+      test('TodoListViewModel onDownloadClicked with BeerAppError', () async {
         when(todoRepo.fetchTodos()).thenThrow(GeneralError());
         expect(sut.isLoading, false);
         expect(sut.errorKey, isNull);
@@ -100,7 +100,7 @@ void main() {
         verifyNoMoreInteractions(todoRepo);
         verifyZeroInteractions(navigator);
       });
-      test('TodoListViewModel onDownloadClicked with no FlutterTemplateError', () async {
+      test('TodoListViewModel onDownloadClicked with no BeerAppError', () async {
         when(todoRepo.fetchTodos()).thenThrow(ArgumentError());
         expect(sut.isLoading, false);
         expect(sut.errorKey, isNull);

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'flutter_template_database.dart';
+part of 'beer_app_database.dart';
 
 // **************************************************************************
 // DriftDatabaseGenerator
@@ -212,9 +212,9 @@ class $DbTodoTableTable extends DbTodoTable
   }
 }
 
-abstract class _$FlutterTemplateDatabase extends GeneratedDatabase {
-  _$FlutterTemplateDatabase(QueryExecutor e) : super(e);
-  _$FlutterTemplateDatabase.connect(DatabaseConnection c) : super.connect(c);
+abstract class _$BeerAppDatabase extends GeneratedDatabase {
+  _$BeerAppDatabase(QueryExecutor e) : super(e);
+  _$BeerAppDatabase.connect(DatabaseConnection c) : super.connect(c);
   late final $DbTodoTableTable dbTodoTable = $DbTodoTableTable(this);
   @override
   Iterable<TableInfo<Table, dynamic>> get allTables =>

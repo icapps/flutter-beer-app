@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/navigator/main_navigator.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/navigator/main_navigator.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../di/test_injectable.dart';

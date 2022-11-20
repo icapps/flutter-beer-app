@@ -1,7 +1,7 @@
+import 'package:beer_app/model/exceptions/un_authorized_error.dart';
+import 'package:beer_app/repository/secure_storage/auth/auth_storage.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_template/model/exceptions/un_authorized_error.dart';
-import 'package:flutter_template/repository/secure_storage/auth/auth_storage.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 import 'package:injectable/injectable.dart';
 import 'package:synchronized/synchronized.dart' as synchronized;
@@ -49,7 +49,7 @@ class _RefreshRepository implements RefreshRepository {
         await _authStorage.getRefreshToken();
         // TODO implement refresh call
         // await _authStoring.saveRefreshToken(refreshToken: result.refreshToken, accessToken: result.accessToken);
-        throw UnimplementedError('No implementatino for the refresh in the refresh repository');
+        throw UnimplementedError('No implementation for the refresh in the refresh repository');
       } catch (e) {
         _failure = true;
         final logoutCb = logoutCallback;

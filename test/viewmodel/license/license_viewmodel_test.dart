@@ -1,6 +1,6 @@
-import 'package:flutter_template/navigator/main_navigator.dart';
-import 'package:flutter_template/util/license.dart';
-import 'package:flutter_template/viewmodel/license/license_viewmodel.dart';
+import 'package:beer_app/navigator/main_navigator.dart';
+import 'package:beer_app/util/license.dart';
+import 'package:beer_app/viewmodel/license/license_viewmodel.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 

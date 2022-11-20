@@ -1,4 +1,4 @@
-import 'package:flutter_template/util/platform/platform_util.dart';
+import 'package:beer_app/util/platform/platform_util.dart';
 import 'package:get/route_manager.dart';
 
 class BasePage<T> extends GetPage<T> {

@@ -1,9 +1,9 @@
-import 'package:flutter_template/database/flutter_template_database.dart';
-import 'package:flutter_template/database/todo/todo_dao_storage.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/model/webservice/todo/todo.dart';
-import 'package:flutter_template/repository/todo/todo_repository.dart';
-import 'package:flutter_template/webservice/todo/todo_service.dart';
+import 'package:beer_app/database/beer_app_database.dart';
+import 'package:beer_app/database/todo/todo_dao_storage.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/model/webservice/todo/todo.dart';
+import 'package:beer_app/repository/todo/todo_repository.dart';
+import 'package:beer_app/webservice/todo/todo_service.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 

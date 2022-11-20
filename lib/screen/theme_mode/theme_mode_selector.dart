@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/navigator/route_names.dart';
-import 'package:flutter_template/viewmodel/debug/debug_theme_selector_viewmodel.dart';
-import 'package:flutter_template/widget/debug/selector_item.dart';
-import 'package:flutter_template/widget/general/styled/flutter_template_back_button.dart';
-import 'package:flutter_template/widget/general/theme_widget.dart';
-import 'package:flutter_template/widget/provider/provider_widget.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/navigator/route_names.dart';
+import 'package:beer_app/viewmodel/debug/debug_theme_selector_viewmodel.dart';
+import 'package:beer_app/widget/debug/selector_item.dart';
+import 'package:beer_app/widget/general/styled/beer_app_back_button.dart';
+import 'package:beer_app/widget/general/theme_widget.dart';
+import 'package:beer_app/widget/provider/provider_widget.dart';
 
 class ThemeModeSelectorScreen extends StatefulWidget {
   static const String routeName = RouteNames.themeModeSelectorScreen;
@@ -28,7 +28,7 @@ class ThemeModeSelectorScreenState extends State<ThemeModeSelectorScreen> {
           backgroundColor: theme.colorsTheme.background,
           appBar: AppBar(
             systemOverlayStyle: SystemUiOverlayStyle.light,
-            leading: FlutterTemplateBackButton.light(onClick: viewModel.onBackClicked),
+            leading: BeerAppBackButton.light(onClick: viewModel.onBackClicked),
             title: const Text('Select a theme mode'),
             backgroundColor: theme.colorsTheme.primary,
           ),

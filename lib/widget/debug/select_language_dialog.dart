@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/util/extension/localization_extension.dart';
-import 'package:flutter_template/viewmodel/global/global_viewmodel.dart';
-import 'package:flutter_template/widget/debug/selector_item.dart';
-import 'package:flutter_template/widget/provider/data_provider_widget.dart';
+import 'package:beer_app/util/extension/localization_extension.dart';
+import 'package:beer_app/viewmodel/global/global_viewmodel.dart';
+import 'package:beer_app/widget/debug/selector_item.dart';
+import 'package:beer_app/widget/provider/data_provider_widget.dart';
 import 'package:provider/provider.dart';
 
 class SelectLanguageDialog extends StatelessWidget {
