@@ -167,7 +167,7 @@ When you enter text in the field, you should see the value printed in the consol
 
 You can add the password field in the same way.
 
-If you run this on a device with rounded corners, you will see that the input field is not entirely visible. To fix this, we can add a `SafeArea` widget. This widget ensures that the content is not covered by the device's status bar. Add a `SafeArea` between the Scaffold and Column widget to fix this:
+If you run this on a device with rounded corners or notch, you will see that the input field is not entirely visible. To fix this, we can add a `SafeArea` widget. This widget ensures that the content is not covered by the device's status bar. Add a `SafeArea` between the Scaffold and Column widget to fix this:
 
 ```dart
 return Scaffold(
