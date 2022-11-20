@@ -1,7 +1,7 @@
 import 'package:drift/drift.dart';
-import 'package:flutter_template/database/flutter_template_database.dart';
-import 'package:flutter_template/model/database/todo/db_todo_table.dart';
-import 'package:flutter_template/model/webservice/todo/todo.dart';
+import 'package:beer_app/database/beer_app_database.dart';
+import 'package:beer_app/model/database/todo/db_todo_table.dart';
+import 'package:beer_app/model/webservice/todo/todo.dart';
 import 'package:injectable/injectable.dart';
 
 part 'todo_dao_storage.g.dart';
@@ -9,7 +9,7 @@ part 'todo_dao_storage.g.dart';
 @lazySingleton
 abstract class TodoDaoStorage {
   @factoryMethod
-  factory TodoDaoStorage(FlutterTemplateDatabase db) = _TodoDaoStorage;
+  factory TodoDaoStorage(BeerAppDatabase db) = _TodoDaoStorage;
 
   Stream<List<DbTodo>> getAllTodosStream();
 
@@ -25,7 +25,7 @@ abstract class TodoDaoStorage {
 @DriftAccessor(tables: [
   DbTodoTable,
 ])
-class _TodoDaoStorage extends DatabaseAccessor<FlutterTemplateDatabase> with _$_TodoDaoStorageMixin implements TodoDaoStorage {
+class _TodoDaoStorage extends DatabaseAccessor<BeerAppDatabase> with _$_TodoDaoStorageMixin implements TodoDaoStorage {
   _TodoDaoStorage(super.db);
 
   @override

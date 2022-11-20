@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/model/webservice/todo/todo.dart';
-import 'package:flutter_template/styles/theme_assets.dart';
-import 'package:flutter_template/styles/theme_dimens.dart';
-import 'package:flutter_template/util/keys.dart';
-import 'package:flutter_template/viewmodel/todo/todo_list/todo_list_viewmodel.dart';
-import 'package:flutter_template/widget/general/action/action_item.dart';
-import 'package:flutter_template/widget/general/styled/flutter_template_progress_indicator.dart';
-import 'package:flutter_template/widget/provider/provider_widget.dart';
-import 'package:flutter_template/widget/todo/todo_row_item.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/model/webservice/todo/todo.dart';
+import 'package:beer_app/styles/theme_assets.dart';
+import 'package:beer_app/styles/theme_dimens.dart';
+import 'package:beer_app/util/keys.dart';
+import 'package:beer_app/viewmodel/todo/todo_list/todo_list_viewmodel.dart';
+import 'package:beer_app/widget/general/action/action_item.dart';
+import 'package:beer_app/widget/general/styled/beer_app_progress_indicator.dart';
+import 'package:beer_app/widget/provider/provider_widget.dart';
+import 'package:beer_app/widget/todo/todo_row_item.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 
 class TodoListScreen extends StatefulWidget {
@@ -51,7 +51,7 @@ class TodoListScreenState extends State<TodoListScreen> {
           ),
           body: Builder(
             builder: (context) {
-              if (viewModel.isLoading) return Center(child: FlutterTemplateProgressIndicator(dark: theme.isLightTheme));
+              if (viewModel.isLoading) return Center(child: BeerAppProgressIndicator(dark: theme.isLightTheme));
               if (errorKey != null) {
                 return Center(
                   child: Text(

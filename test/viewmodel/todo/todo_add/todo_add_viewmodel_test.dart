@@ -1,7 +1,7 @@
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/navigator/main_navigator.dart';
-import 'package:flutter_template/repository/todo/todo_repository.dart';
-import 'package:flutter_template/viewmodel/todo/todo_add/todo_add_viewmodel.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/navigator/main_navigator.dart';
+import 'package:beer_app/repository/todo/todo_repository.dart';
+import 'package:beer_app/viewmodel/todo/todo_add/todo_add_viewmodel.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 

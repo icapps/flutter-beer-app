@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/styles/theme_colors.dart';
-import 'package:flutter_template/styles/theme_fonts.dart';
+import 'package:beer_app/styles/theme_colors.dart';
+import 'package:beer_app/styles/theme_fonts.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 
-class FlutterTemplateThemeData {
-  FlutterTemplateThemeData._();
+class BeerAppThemeData {
+  BeerAppThemeData._();
 
   static final _darkThemeData = ThemeData(
     fontFamily: ThemeFonts.body,
@@ -48,7 +48,7 @@ class FlutterTemplateThemeData {
   }
 }
 
-class FlutterTemplateTextTheme {
+class BeerAppTextTheme {
   final TextStyle titleHuge;
   final TextStyle titleBig;
   final TextStyle titleNormal;
@@ -67,7 +67,7 @@ class FlutterTemplateTextTheme {
   final TextStyle infoBodySubHeader;
   final TextStyle bodyBig;
 
-  const FlutterTemplateTextTheme({
+  const BeerAppTextTheme({
     required this.titleHuge,
     required this.titleBig,
     required this.titleNormal,
@@ -85,11 +85,11 @@ class FlutterTemplateTextTheme {
   });
 }
 
-class FlutterTemplateTextThemeExceptions {
-  const FlutterTemplateTextThemeExceptions();
+class BeerAppTextThemeExceptions {
+  const BeerAppTextThemeExceptions();
 }
 
-class FlutterTemplateColorsTheme {
+class BeerAppColorsTheme {
   final Color text;
   final Color inverseText;
   final Color errorText;
@@ -124,7 +124,7 @@ class FlutterTemplateColorsTheme {
 
   final Color debugTitleBackground;
 
-  const FlutterTemplateColorsTheme({
+  const BeerAppColorsTheme({
     required this.primary,
     required this.secondary,
     required this.accent,
@@ -158,20 +158,20 @@ class FlutterTemplateColorsTheme {
   });
 }
 
-enum FlutterTemplateThemeStyle {
+enum BeerAppThemeStyle {
   dark,
   light,
 }
 
-class FlutterTemplateTheme {
-  late FlutterTemplateTextTheme _coreTextTheme;
-  late FlutterTemplateTextTheme _inverseCoreTextTheme;
-  late FlutterTemplateTextTheme _accentTextTheme;
-  late FlutterTemplateTextThemeExceptions _exceptionsTextTheme;
-  late FlutterTemplateColorsTheme _colorsTheme;
-  FlutterTemplateThemeStyle flutterTemplateThemeStyle = FlutterTemplateThemeStyle.light;
+class BeerAppTheme {
+  late BeerAppTextTheme _coreTextTheme;
+  late BeerAppTextTheme _inverseCoreTextTheme;
+  late BeerAppTextTheme _accentTextTheme;
+  late BeerAppTextThemeExceptions _exceptionsTextTheme;
+  late BeerAppColorsTheme _colorsTheme;
+  BeerAppThemeStyle flutterTemplateThemeStyle = BeerAppThemeStyle.light;
 
-  static const _colorThemeDark = FlutterTemplateColorsTheme(
+  static const _colorThemeDark = BeerAppColorsTheme(
     text: ThemeColors.white,
     inverseText: ThemeColors.black,
     errorText: ThemeColors.error,
@@ -204,7 +204,7 @@ class FlutterTemplateTheme {
     debugTitleBackground: ThemeColors.white20,
   );
 
-  static const _colorThemeLight = FlutterTemplateColorsTheme(
+  static const _colorThemeLight = BeerAppColorsTheme(
     text: ThemeColors.black,
     inverseText: ThemeColors.white,
     errorText: ThemeColors.error,
@@ -237,7 +237,7 @@ class FlutterTemplateTheme {
     debugTitleBackground: ThemeColors.lightGrey,
   );
 
-  static FlutterTemplateTextTheme _coreTextThemeFromColorsTheme({required FlutterTemplateColorsTheme colorTheme}) => FlutterTemplateTextTheme(
+  static BeerAppTextTheme _coreTextThemeFromColorsTheme({required BeerAppColorsTheme colorTheme}) => BeerAppTextTheme(
         titleHuge: TextStyle(fontSize: 40, color: colorTheme.text, fontFamily: ThemeFonts.title, height: 1.2),
         titleBig: TextStyle(fontSize: 30, color: colorTheme.text, fontFamily: ThemeFonts.title, height: 1.2),
         titleNormal: TextStyle(fontSize: 24, color: colorTheme.text, fontFamily: ThemeFonts.title),
@@ -254,7 +254,7 @@ class FlutterTemplateTheme {
         infoBodySubHeader: TextStyle(fontSize: 14, color: colorTheme.text, fontFamily: ThemeFonts.body, fontWeight: FontWeight.w600),
       );
 
-  static FlutterTemplateTextTheme _inverseCoreTextThemeFromColorsTheme({required FlutterTemplateColorsTheme colorTheme}) => FlutterTemplateTextTheme(
+  static BeerAppTextTheme _inverseCoreTextThemeFromColorsTheme({required BeerAppColorsTheme colorTheme}) => BeerAppTextTheme(
         titleHuge: TextStyle(fontSize: 40, color: colorTheme.inverseText, fontFamily: ThemeFonts.title, height: 1.2),
         titleBig: TextStyle(fontSize: 30, color: colorTheme.inverseText, fontFamily: ThemeFonts.title, height: 1.2),
         titleNormal: TextStyle(fontSize: 24, color: colorTheme.inverseText, fontFamily: ThemeFonts.title),
@@ -271,7 +271,7 @@ class FlutterTemplateTheme {
         infoBodySubHeader: TextStyle(fontSize: 14, color: colorTheme.inverseText, fontFamily: ThemeFonts.body, fontWeight: FontWeight.w600),
       );
 
-  static FlutterTemplateTextTheme _accentTextThemeFromColorsTheme({required FlutterTemplateColorsTheme colorTheme}) => FlutterTemplateTextTheme(
+  static BeerAppTextTheme _accentTextThemeFromColorsTheme({required BeerAppColorsTheme colorTheme}) => BeerAppTextTheme(
         titleHuge: TextStyle(fontSize: 40, color: colorTheme.accent, fontFamily: ThemeFonts.title, height: 1.2),
         titleBig: TextStyle(fontSize: 30, color: colorTheme.accent, fontFamily: ThemeFonts.title, height: 1.2),
         titleNormal: TextStyle(fontSize: 24, color: colorTheme.accent, fontFamily: ThemeFonts.title),
@@ -288,19 +288,19 @@ class FlutterTemplateTheme {
         infoBodySubHeader: TextStyle(fontSize: 14, color: colorTheme.accent, fontFamily: ThemeFonts.body, fontWeight: FontWeight.w600),
       );
 
-  static FlutterTemplateTextThemeExceptions _textThemeExceptionsFromColorsTheme({required FlutterTemplateColorsTheme colorTheme}) => const FlutterTemplateTextThemeExceptions();
+  static BeerAppTextThemeExceptions _textThemeExceptionsFromColorsTheme({required BeerAppColorsTheme colorTheme}) => const BeerAppTextThemeExceptions();
 
-  FlutterTemplateTextTheme get coreTextTheme => _coreTextTheme;
+  BeerAppTextTheme get coreTextTheme => _coreTextTheme;
 
-  FlutterTemplateTextTheme get inverseCoreTextTheme => _inverseCoreTextTheme;
+  BeerAppTextTheme get inverseCoreTextTheme => _inverseCoreTextTheme;
 
-  FlutterTemplateTextTheme get accentTextTheme => _accentTextTheme;
+  BeerAppTextTheme get accentTextTheme => _accentTextTheme;
 
-  FlutterTemplateTextThemeExceptions get exceptionsTextTheme => _exceptionsTextTheme;
+  BeerAppTextThemeExceptions get exceptionsTextTheme => _exceptionsTextTheme;
 
-  FlutterTemplateColorsTheme get colorsTheme => _colorsTheme;
+  BeerAppColorsTheme get colorsTheme => _colorsTheme;
 
-  FlutterTemplateTheme({FlutterTemplateColorsTheme colorsTheme = _colorThemeLight}) {
+  BeerAppTheme({BeerAppColorsTheme colorsTheme = _colorThemeLight}) {
     _colorsTheme = colorsTheme;
     _coreTextTheme = _coreTextThemeFromColorsTheme(colorTheme: _colorsTheme);
     _inverseCoreTextTheme = _inverseCoreTextThemeFromColorsTheme(colorTheme: _colorsTheme);
@@ -308,17 +308,17 @@ class FlutterTemplateTheme {
     _exceptionsTextTheme = _textThemeExceptionsFromColorsTheme(colorTheme: _colorsTheme);
   }
 
-  bool get isDarkTheme => (flutterTemplateThemeStyle == FlutterTemplateThemeStyle.dark);
+  bool get isDarkTheme => (flutterTemplateThemeStyle == BeerAppThemeStyle.dark);
 
-  bool get isLightTheme => (flutterTemplateThemeStyle == FlutterTemplateThemeStyle.light);
+  bool get isLightTheme => (flutterTemplateThemeStyle == BeerAppThemeStyle.light);
 
   /// returns `true` if the theme was updated to a different value
-  bool configureForThemeStyle(FlutterTemplateThemeStyle themeStyle) {
+  bool configureForThemeStyle(BeerAppThemeStyle themeStyle) {
     if (themeStyle == flutterTemplateThemeStyle) {
       return false;
     }
     flutterTemplateThemeStyle = themeStyle;
-    if (flutterTemplateThemeStyle == FlutterTemplateThemeStyle.dark) {
+    if (flutterTemplateThemeStyle == BeerAppThemeStyle.dark) {
       _colorsTheme = _colorThemeDark;
     } else {
       _colorsTheme = _colorThemeLight;

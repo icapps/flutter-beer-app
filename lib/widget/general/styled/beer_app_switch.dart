@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/widget/provider/data_provider_widget.dart';
+import 'package:beer_app/widget/provider/data_provider_widget.dart';
 
-class FlutterTemplateSwitch extends StatelessWidget {
+class BeerAppSwitch extends StatelessWidget {
   final bool value;
   final ValueChanged<bool> onChanged;
 
-  const FlutterTemplateSwitch({
+  const BeerAppSwitch({
     required this.value,
     required this.onChanged,
     Key? key,

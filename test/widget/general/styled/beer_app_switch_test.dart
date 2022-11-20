@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/widget/general/styled/flutter_template_switch.dart';
+import 'package:beer_app/widget/general/styled/beer_app_switch.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../../di/test_injectable.dart';
@@ -8,38 +8,38 @@ import '../../../util/test_util.dart';
 void main() {
   setUp(() async => initTestInjectable());
   group('Android', () {
-    testWidgets('FlutterTemplateSwitch with false value', (tester) async {
+    testWidgets('BeerAppSwitch with false value', (tester) async {
       final sut = Theme(
         data: ThemeData(platform: TargetPlatform.android),
-        child: FlutterTemplateSwitch(
+        child: BeerAppSwitch(
           value: false,
           onChanged: (value) {},
         ),
       );
 
       await TestUtil.loadWidgetWithText(tester, sut);
-      await TestUtil.takeScreenshot(tester, 'flutter_template_switch_false_android');
+      await TestUtil.takeScreenshot(tester, 'beer_app_switch_false_android');
     });
 
-    testWidgets('FlutterTemplateSwitch with true value', (tester) async {
+    testWidgets('BeerAppSwitch with true value', (tester) async {
       final sut = Theme(
         data: ThemeData(platform: TargetPlatform.android),
-        child: FlutterTemplateSwitch(
+        child: BeerAppSwitch(
           value: true,
           onChanged: (value) {},
         ),
       );
 
       await TestUtil.loadWidgetWithText(tester, sut);
-      await TestUtil.takeScreenshot(tester, 'flutter_template_switch_true_android');
+      await TestUtil.takeScreenshot(tester, 'beer_app_switch_true_android');
     });
 
     group('OnChanged', () {
-      testWidgets('FlutterTemplateSwitch onChanged from value true', (tester) async {
+      testWidgets('BeerAppSwitch onChanged from value true', (tester) async {
         bool? newValue;
         final sut = Theme(
           data: ThemeData(platform: TargetPlatform.android),
-          child: FlutterTemplateSwitch(
+          child: BeerAppSwitch(
             value: true,
             onChanged: (value) {
               newValue = value;
@@ -48,17 +48,17 @@ void main() {
         );
 
         await TestUtil.loadWidgetWithText(tester, sut);
-        final finder = find.byType(FlutterTemplateSwitch);
+        final finder = find.byType(BeerAppSwitch);
         expect(finder, findsOneWidget);
         await tester.tap(finder);
         await tester.pumpAndSettle();
         expect(newValue, false);
       });
-      testWidgets('FlutterTemplateSwitch onChanged from value false', (tester) async {
+      testWidgets('BeerAppSwitch onChanged from value false', (tester) async {
         bool? newValue;
         final sut = Theme(
           data: ThemeData(platform: TargetPlatform.android),
-          child: FlutterTemplateSwitch(
+          child: BeerAppSwitch(
             value: false,
             onChanged: (value) {
               newValue = value;
@@ -67,7 +67,7 @@ void main() {
         );
 
         await TestUtil.loadWidgetWithText(tester, sut);
-        final finder = find.byType(FlutterTemplateSwitch);
+        final finder = find.byType(BeerAppSwitch);
         expect(finder, findsOneWidget);
         await tester.tap(finder);
         await tester.pumpAndSettle();
@@ -77,38 +77,38 @@ void main() {
   });
 
   group('iOS', () {
-    testWidgets('FlutterTemplateSwitch with false value', (tester) async {
+    testWidgets('BeerAppSwitch with false value', (tester) async {
       final sut = Theme(
         data: ThemeData(platform: TargetPlatform.iOS),
-        child: FlutterTemplateSwitch(
+        child: BeerAppSwitch(
           value: false,
           onChanged: (value) {},
         ),
       );
 
       await TestUtil.loadWidgetWithText(tester, sut);
-      await TestUtil.takeScreenshot(tester, 'flutter_template_switch_false_ios');
+      await TestUtil.takeScreenshot(tester, 'beer_app_switch_false_ios');
     });
 
-    testWidgets('FlutterTemplateSwitch with true value', (tester) async {
+    testWidgets('BeerAppSwitch with true value', (tester) async {
       final sut = Theme(
         data: ThemeData(platform: TargetPlatform.iOS),
-        child: FlutterTemplateSwitch(
+        child: BeerAppSwitch(
           value: true,
           onChanged: (value) {},
         ),
       );
 
       await TestUtil.loadWidgetWithText(tester, sut);
-      await TestUtil.takeScreenshot(tester, 'flutter_template_switch_true_ios');
+      await TestUtil.takeScreenshot(tester, 'beer_app_switch_true_ios');
     });
 
     group('OnChanged', () {
-      testWidgets('FlutterTemplateSwitch onChanged from value true', (tester) async {
+      testWidgets('BeerAppSwitch onChanged from value true', (tester) async {
         bool? newValue;
         final sut = Theme(
           data: ThemeData(platform: TargetPlatform.iOS),
-          child: FlutterTemplateSwitch(
+          child: BeerAppSwitch(
             value: true,
             onChanged: (value) {
               newValue = value;
@@ -117,17 +117,17 @@ void main() {
         );
 
         await TestUtil.loadWidgetWithText(tester, sut);
-        final finder = find.byType(FlutterTemplateSwitch);
+        final finder = find.byType(BeerAppSwitch);
         expect(finder, findsOneWidget);
         await tester.tap(finder);
         await tester.pumpAndSettle();
         expect(newValue, false);
       });
-      testWidgets('FlutterTemplateSwitch onChanged from value false', (tester) async {
+      testWidgets('BeerAppSwitch onChanged from value false', (tester) async {
         bool? newValue;
         final sut = Theme(
           data: ThemeData(platform: TargetPlatform.iOS),
-          child: FlutterTemplateSwitch(
+          child: BeerAppSwitch(
             value: false,
             onChanged: (value) {
               newValue = value;
@@ -136,7 +136,7 @@ void main() {
         );
 
         await TestUtil.loadWidgetWithText(tester, sut);
-        final finder = find.byType(FlutterTemplateSwitch);
+        final finder = find.byType(BeerAppSwitch);
         expect(finder, findsOneWidget);
         await tester.tap(finder);
         await tester.pumpAndSettle();

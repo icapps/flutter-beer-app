@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/repository/debug/debug_repository.dart';
-import 'package:flutter_template/repository/locale/locale_repository.dart';
-import 'package:flutter_template/repository/shared_prefs/local/local_storage.dart';
-import 'package:flutter_template/util/locale/localization.dart';
-import 'package:flutter_template/util/locale/localization_keys.dart';
-import 'package:flutter_template/viewmodel/global/global_viewmodel.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/repository/debug/debug_repository.dart';
+import 'package:beer_app/repository/locale/locale_repository.dart';
+import 'package:beer_app/repository/shared_prefs/local/local_storage.dart';
+import 'package:beer_app/util/locale/localization.dart';
+import 'package:beer_app/util/locale/localization_keys.dart';
+import 'package:beer_app/viewmodel/global/global_viewmodel.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 

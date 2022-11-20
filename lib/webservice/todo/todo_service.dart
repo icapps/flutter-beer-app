@@ -1,4 +1,4 @@
-import 'package:flutter_template/model/webservice/todo/todo.dart';
+import 'package:beer_app/model/webservice/todo/todo.dart';
 
 // ignore: one_member_abstracts
 abstract class TodoService {

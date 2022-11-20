@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/model/webservice/todo/todo.dart';
-import 'package:flutter_template/repository/secure_storage/auth/auth_storage.dart';
-import 'package:flutter_template/repository/shared_prefs/local/local_storage.dart';
-import 'package:flutter_template/util/license.dart';
-import 'package:flutter_template/util/locale/localization.dart';
-import 'package:flutter_template/util/locale/localization_keys.dart';
-import 'package:flutter_template/viewmodel/debug/debug_viewmodel.dart';
-import 'package:flutter_template/viewmodel/global/global_viewmodel.dart';
-import 'package:flutter_template/viewmodel/license/license_viewmodel.dart';
-import 'package:flutter_template/viewmodel/login/login_viewmodel.dart';
-import 'package:flutter_template/viewmodel/todo/todo_add/todo_add_viewmodel.dart';
-import 'package:flutter_template/viewmodel/todo/todo_list/todo_list_viewmodel.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/model/webservice/todo/todo.dart';
+import 'package:beer_app/repository/secure_storage/auth/auth_storage.dart';
+import 'package:beer_app/repository/shared_prefs/local/local_storage.dart';
+import 'package:beer_app/util/license.dart';
+import 'package:beer_app/util/locale/localization.dart';
+import 'package:beer_app/util/locale/localization_keys.dart';
+import 'package:beer_app/viewmodel/debug/debug_viewmodel.dart';
+import 'package:beer_app/viewmodel/global/global_viewmodel.dart';
+import 'package:beer_app/viewmodel/license/license_viewmodel.dart';
+import 'package:beer_app/viewmodel/todo/todo_add/todo_add_viewmodel.dart';
+import 'package:beer_app/viewmodel/todo/todo_list/todo_list_viewmodel.dart';
 import 'package:mockito/mockito.dart';
 
 import '../util/test_extensions.dart';
@@ -59,12 +58,6 @@ void seedsLicenses() {
         repository: 'repository$i',
       ),
   ]);
-}
-
-void seedLoginViewModel() {
-  final loginViewModel = getIt<LoginViewModel>();
-  when(loginViewModel.isLoading).thenReturn(false);
-  when(loginViewModel.isLoginEnabled).thenReturn(true);
 }
 
 void seedGlobalViewModel() {

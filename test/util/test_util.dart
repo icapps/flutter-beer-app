@@ -3,10 +3,10 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_template/app.dart';
-import 'package:flutter_template/architecture.dart';
-import 'package:flutter_template/styles/theme_fonts.dart';
-import 'package:flutter_template/util/locale/localization_fallback_cupertino_delegate.dart';
+import 'package:beer_app/app.dart';
+import 'package:beer_app/architecture.dart';
+import 'package:beer_app/styles/theme_fonts.dart';
+import 'package:beer_app/util/locale/localization_fallback_cupertino_delegate.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../mocks/mocked_network_images.dart';
@@ -58,7 +58,7 @@ class TestUtil {
 
   // This method should be used when taking screenshot tests of the full app
   // Full integration tests
-  static Future<Widget> loadFlutterTemplateApp(WidgetTester tester) async {
+  static Future<Widget> loadBeerAppApp(WidgetTester tester) async {
     return _internalLoadWidget(tester, const MyApp());
   }
 

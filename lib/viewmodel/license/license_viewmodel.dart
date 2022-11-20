@@ -1,5 +1,5 @@
-import 'package:flutter_template/navigator/main_navigator.dart';
-import 'package:flutter_template/util/license.dart';
+import 'package:beer_app/navigator/main_navigator.dart';
+import 'package:beer_app/util/license.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 import 'package:injectable/injectable.dart';
 

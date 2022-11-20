@@ -1,5 +1,5 @@
-import 'package:flutter_template/util/env/flavor_config.dart';
-import 'package:flutter_template/util/locale/localization_keys.dart';
+import 'package:beer_app/util/env/flavor_config.dart';
+import 'package:beer_app/util/locale/localization_keys.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 
 class CodeError with LocalizedError {

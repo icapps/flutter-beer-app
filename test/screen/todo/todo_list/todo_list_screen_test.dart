@@ -1,9 +1,9 @@
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/screen/todo/todo_list/todo_list_screen.dart';
-import 'package:flutter_template/util/keys.dart';
-import 'package:flutter_template/util/locale/localization_keys.dart';
-import 'package:flutter_template/viewmodel/todo/todo_list/todo_list_viewmodel.dart';
-import 'package:flutter_template/widget/todo/todo_row_item.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/screen/todo/todo_list/todo_list_screen.dart';
+import 'package:beer_app/util/keys.dart';
+import 'package:beer_app/util/locale/localization_keys.dart';
+import 'package:beer_app/viewmodel/todo/todo_list/todo_list_viewmodel.dart';
+import 'package:beer_app/widget/todo/todo_row_item.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 

@@ -1,5 +1,5 @@
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/util/locale/localization.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/util/locale/localization.dart';
 
 extension LocalizationExtension on Object {
   Localization get localization => getIt();

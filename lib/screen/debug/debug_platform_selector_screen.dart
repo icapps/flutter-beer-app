@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/navigator/route_names.dart';
-import 'package:flutter_template/viewmodel/debug/debug_platform_selector_viewmodel.dart';
-import 'package:flutter_template/viewmodel/global/global_viewmodel.dart';
-import 'package:flutter_template/widget/debug/selector_item.dart';
-import 'package:flutter_template/widget/general/styled/flutter_template_back_button.dart';
-import 'package:flutter_template/widget/general/theme_widget.dart';
-import 'package:flutter_template/widget/provider/provider_widget.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/navigator/route_names.dart';
+import 'package:beer_app/viewmodel/debug/debug_platform_selector_viewmodel.dart';
+import 'package:beer_app/viewmodel/global/global_viewmodel.dart';
+import 'package:beer_app/widget/debug/selector_item.dart';
+import 'package:beer_app/widget/general/styled/beer_app_back_button.dart';
+import 'package:beer_app/widget/general/theme_widget.dart';
+import 'package:beer_app/widget/provider/provider_widget.dart';
 import 'package:provider/provider.dart';
 
 class DebugPlatformSelectorScreen extends StatefulWidget {
@@ -30,7 +30,7 @@ class DebugPlatformSelectorScreenState extends State<DebugPlatformSelectorScreen
           backgroundColor: theme.colorsTheme.background,
           appBar: AppBar(
             systemOverlayStyle: SystemUiOverlayStyle.light,
-            leading: FlutterTemplateBackButton.light(onClick: value.onBackClicked),
+            leading: BeerAppBackButton.light(onClick: value.onBackClicked),
             title: const Text('Select a platform'),
             backgroundColor: theme.colorsTheme.primary,
           ),

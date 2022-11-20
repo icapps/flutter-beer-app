@@ -1,9 +1,9 @@
-import 'package:flutter_template/database/flutter_template_database.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/navigator/main_navigator.dart';
-import 'package:flutter_template/repository/debug/debug_repository.dart';
-import 'package:flutter_template/repository/shared_prefs/local/local_storage.dart';
-import 'package:flutter_template/viewmodel/debug/debug_viewmodel.dart';
+import 'package:beer_app/database/beer_app_database.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/navigator/main_navigator.dart';
+import 'package:beer_app/repository/debug/debug_repository.dart';
+import 'package:beer_app/repository/shared_prefs/local/local_storage.dart';
+import 'package:beer_app/viewmodel/debug/debug_viewmodel.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -16,12 +16,12 @@ void main() {
   late MainNavigator navigator;
   late DebugRepository debugRepo;
   late LocalStorage localStorage;
-  late FlutterTemplateDatabase database;
+  late BeerAppDatabase database;
 
   setUp(() async {
     await initTestInjectable();
     navigator = MockMainNavigator();
-    database = getIt<FlutterTemplateDatabase>();
+    database = getIt<BeerAppDatabase>();
     debugRepo = getIt();
     localStorage = getIt();
     sut = DebugViewModel(debugRepo, navigator, database, localStorage);

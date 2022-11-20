@@ -1,5 +1,5 @@
-name: flutter_template
-description: A Flutter Template to get started quickly
+name: beer_app
+description: Beer app from a workshop by icapps
 version: 1.0.0+1
 
 environment:

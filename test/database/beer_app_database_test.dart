@@ -1,22 +1,22 @@
-import 'package:flutter_template/database/flutter_template_database.dart';
-import 'package:flutter_template/di/injectable.dart';
+import 'package:beer_app/database/beer_app_database.dart';
+import 'package:beer_app/di/injectable.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../di/test_injectable.dart';
 
 void main() {
-  late FlutterTemplateDatabase sut;
+  late BeerAppDatabase sut;
 
   setUp(() async {
     await initTestInjectable();
     sut = getIt();
   });
 
-  test('FlutterTemplateDatabase should have the correct version', () {
+  test('BeerAppDatabase should have the correct version', () {
     expect(sut.schemaVersion, 1);
   });
 
-  test('FlutterTemplateDatabase should delete all tables', () async {
+  test('BeerAppDatabase should delete all tables', () async {
     final resultTodos1 = await sut.select(sut.dbTodoTable).get();
     expect(resultTodos1.isEmpty, true);
 

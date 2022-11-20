@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:drift_db_viewer/drift_db_viewer.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_template/database/flutter_template_database.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/navigator/main_navigator.dart';
+import 'package:beer_app/database/beer_app_database.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/navigator/main_navigator.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../di/test_injectable.dart';
@@ -22,7 +22,7 @@ void main() {
 
     final mainNavigator = MainNavigator(getIt.get());
     await TestUtil.loadScreen(tester, const SizedBox.shrink());
-    final db = getIt<FlutterTemplateDatabase>();
+    final db = getIt<BeerAppDatabase>();
     unawaited(mainNavigator.goToDatabase(db));
     await tester.pumpAndSettle();
     expect(find.byType(DriftDbViewer), findsOneWidget);

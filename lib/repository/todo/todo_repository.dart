@@ -1,7 +1,7 @@
-import 'package:flutter_template/database/todo/todo_dao_storage.dart';
-import 'package:flutter_template/model/database/todo/db_todo_table.dart';
-import 'package:flutter_template/model/webservice/todo/todo.dart';
-import 'package:flutter_template/webservice/todo/todo_service.dart';
+import 'package:beer_app/database/todo/todo_dao_storage.dart';
+import 'package:beer_app/model/database/todo/db_todo_table.dart';
+import 'package:beer_app/model/webservice/todo/todo.dart';
+import 'package:beer_app/webservice/todo/todo_service.dart';
 import 'package:injectable/injectable.dart';
 
 @lazySingleton

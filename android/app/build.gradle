@@ -38,7 +38,7 @@ android {
   }
 
   defaultConfig {
-    applicationId "com.icapps.fluttertemplate"
+    applicationId "be.example.beerapp"
     minSdkVersion 19
     targetSdkVersion 33
     multiDexEnabled true

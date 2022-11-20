@@ -1,6 +1,6 @@
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/screen/splash/splash_screen.dart';
-import 'package:flutter_template/viewmodel/splash/splash_viewmodel.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/screen/splash/splash_screen.dart';
+import 'package:beer_app/viewmodel/splash/splash_viewmodel.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/navigator/route_names.dart';
-import 'package:flutter_template/util/keys.dart';
-import 'package:flutter_template/viewmodel/debug/debug_viewmodel.dart';
-import 'package:flutter_template/viewmodel/global/global_viewmodel.dart';
-import 'package:flutter_template/widget/debug/debug_row_item.dart';
-import 'package:flutter_template/widget/debug/debug_row_title.dart';
-import 'package:flutter_template/widget/debug/debug_switch_row_item.dart';
-import 'package:flutter_template/widget/provider/provider_widget.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/navigator/route_names.dart';
+import 'package:beer_app/util/keys.dart';
+import 'package:beer_app/viewmodel/debug/debug_viewmodel.dart';
+import 'package:beer_app/viewmodel/global/global_viewmodel.dart';
+import 'package:beer_app/widget/debug/debug_row_item.dart';
+import 'package:beer_app/widget/debug/debug_row_title.dart';
+import 'package:beer_app/widget/debug/debug_switch_row_item.dart';
+import 'package:beer_app/widget/provider/provider_widget.dart';
 import 'package:provider/provider.dart';
 
 class DebugScreen extends StatefulWidget {

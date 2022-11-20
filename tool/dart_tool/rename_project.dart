@@ -1,12 +1,12 @@
 import 'dart:io';
 
-const originalProjectName = 'flutter_template';
-const originalClassNamePrefix = 'FlutterTemplate';
-const originalIOSBundleIdentifier = 'com.icapps.fluttertemplate';
-const originalAndroidPackageName = 'com.icapps.fluttertemplate';
-const originalAndroidFolderPath = 'com/icapps/fluttertemplate';
-const originalAppName = 'Flutter Template';
-const originalDescription = 'A Flutter Template to get started quickly';
+const originalProjectName = 'beer_app';
+const originalClassNamePrefix = 'BeerApp';
+const originalIOSBundleIdentifier = 'be.example.beerapp';
+const originalAndroidPackageName = 'be.example.beerapp';
+const originalAndroidFolderPath = 'be/example/beerapp';
+const originalAppName = 'Beer App';
+const originalDescription = 'Beer app from a workshop by icapps';
 
 void main() {
   Logger.info('Enter application name (eg: My Cool App):');

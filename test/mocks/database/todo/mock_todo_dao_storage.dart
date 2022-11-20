@@ -1,6 +1,6 @@
-import 'package:flutter_template/database/flutter_template_database.dart';
-import 'package:flutter_template/database/todo/todo_dao_storage.dart';
-import 'package:flutter_template/model/webservice/todo/todo.dart';
+import 'package:beer_app/database/beer_app_database.dart';
+import 'package:beer_app/database/todo/todo_dao_storage.dart';
+import 'package:beer_app/model/webservice/todo/todo.dart';
 import 'package:mockito/mockito.dart';
 
 class MockTodoDaoStorage extends Mock implements TodoDaoStorage {

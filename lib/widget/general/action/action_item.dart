@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/styles/theme_dimens.dart';
-import 'package:flutter_template/widget/general/svg_icon.dart';
-import 'package:flutter_template/widget/provider/data_provider_widget.dart';
+import 'package:beer_app/styles/theme_dimens.dart';
+import 'package:beer_app/widget/general/svg_icon.dart';
+import 'package:beer_app/widget/provider/data_provider_widget.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 
 class ActionItem extends StatelessWidget {

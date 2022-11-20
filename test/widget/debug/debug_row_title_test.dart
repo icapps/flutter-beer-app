@@ -1,4 +1,4 @@
-import 'package:flutter_template/widget/debug/debug_row_title.dart';
+import 'package:beer_app/widget/debug/debug_row_title.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../di/test_injectable.dart';
