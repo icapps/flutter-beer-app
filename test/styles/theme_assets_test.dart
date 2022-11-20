@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_template/styles/theme_assets.dart';
-import 'package:flutter_template/styles/theme_data.dart';
-import 'package:flutter_template/styles/theme_dimens.dart';
+import 'package:beer_app/styles/theme_assets.dart';
+import 'package:beer_app/styles/theme_data.dart';
+import 'package:beer_app/styles/theme_dimens.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../di/test_injectable.dart';
@@ -125,7 +125,7 @@ class IconAssetTesterAndroid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: FlutterTemplateThemeData.lightTheme(TargetPlatform.android),
+      data: BeerAppThemeData.lightTheme(TargetPlatform.android),
       child: LayoutBuilder(
         builder: (context, constraint) => SvgPicture.asset(
           getAsset(context),
@@ -149,7 +149,7 @@ class IconAssetTesterIOS extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: FlutterTemplateThemeData.lightTheme(TargetPlatform.iOS),
+      data: BeerAppThemeData.lightTheme(TargetPlatform.iOS),
       child: LayoutBuilder(
         builder: (context, constraint) => SvgPicture.asset(
           getAsset(context),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/main_common.dart';
+import 'package:beer_app/main_common.dart';
 
 class ThemeWidget extends StatefulWidget {
   final Widget child;

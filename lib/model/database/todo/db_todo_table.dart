@@ -1,6 +1,6 @@
 import 'package:drift/drift.dart';
-import 'package:flutter_template/database/flutter_template_database.dart';
-import 'package:flutter_template/model/webservice/todo/todo.dart';
+import 'package:beer_app/database/beer_app_database.dart';
+import 'package:beer_app/model/webservice/todo/todo.dart';
 
 @DataClassName('DbTodo')
 class DbTodoTable extends Table {

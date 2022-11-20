@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/navigator/route_names.dart';
-import 'package:flutter_template/viewmodel/splash/splash_viewmodel.dart';
-import 'package:flutter_template/widget/general/status_bar.dart';
-import 'package:flutter_template/widget/general/styled/flutter_template_progress_indicator.dart';
-import 'package:flutter_template/widget/provider/provider_widget.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/navigator/route_names.dart';
+import 'package:beer_app/viewmodel/splash/splash_viewmodel.dart';
+import 'package:beer_app/widget/general/status_bar.dart';
+import 'package:beer_app/widget/general/styled/beer_app_progress_indicator.dart';
+import 'package:beer_app/widget/provider/provider_widget.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String routeName = RouteNames.splashScreen;
@@ -26,7 +26,7 @@ class SplashScreenState extends State<SplashScreen> {
         child: Scaffold(
           backgroundColor: theme.colorsTheme.primary,
           body: const Center(
-            child: FlutterTemplateProgressIndicator.light(),
+            child: BeerAppProgressIndicator.light(),
           ),
         ),
       ),

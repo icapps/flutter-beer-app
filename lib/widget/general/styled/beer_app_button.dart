@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/styles/theme_colors.dart';
-import 'package:flutter_template/styles/theme_data.dart';
-import 'package:flutter_template/styles/theme_durations.dart';
-import 'package:flutter_template/widget/provider/data_provider_widget.dart';
+import 'package:beer_app/styles/theme_colors.dart';
+import 'package:beer_app/styles/theme_data.dart';
+import 'package:beer_app/styles/theme_durations.dart';
+import 'package:beer_app/widget/provider/data_provider_widget.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 
 enum ButtonType {
@@ -10,14 +10,14 @@ enum ButtonType {
   text,
 }
 
-class FlutterTemplateButton extends StatelessWidget {
+class BeerAppButton extends StatelessWidget {
   final String text;
   final double height;
   final bool isEnabled;
   final VoidCallback? onClick;
   final ButtonType buttonType;
 
-  const FlutterTemplateButton({
+  const BeerAppButton({
     required this.text,
     required this.onClick,
     this.height = 48,
@@ -26,7 +26,7 @@ class FlutterTemplateButton extends StatelessWidget {
     super.key,
   });
 
-  const FlutterTemplateButton.text({
+  const BeerAppButton.text({
     required this.text,
     required this.onClick,
     this.height = 48,
@@ -35,7 +35,7 @@ class FlutterTemplateButton extends StatelessWidget {
     super.key,
   });
 
-  TextStyle _enabledTextStyle(FlutterTemplateTheme theme) {
+  TextStyle _enabledTextStyle(BeerAppTheme theme) {
     switch (buttonType) {
       case ButtonType.regular:
         return theme.coreTextTheme.labelButtonSmall;
@@ -44,7 +44,7 @@ class FlutterTemplateButton extends StatelessWidget {
     }
   }
 
-  TextStyle _disabledTextStyle(FlutterTemplateTheme theme) {
+  TextStyle _disabledTextStyle(BeerAppTheme theme) {
     switch (buttonType) {
       case ButtonType.regular:
         return theme.coreTextTheme.labelButtonSmallDisabled;
@@ -53,7 +53,7 @@ class FlutterTemplateButton extends StatelessWidget {
     }
   }
 
-  Color? _enabledButtonColor(FlutterTemplateTheme theme) {
+  Color? _enabledButtonColor(BeerAppTheme theme) {
     switch (buttonType) {
       case ButtonType.regular:
         return theme.colorsTheme.buttonColor;
@@ -62,7 +62,7 @@ class FlutterTemplateButton extends StatelessWidget {
     }
   }
 
-  Color? _disabledButtonColor(FlutterTemplateTheme theme) {
+  Color? _disabledButtonColor(BeerAppTheme theme) {
     switch (buttonType) {
       case ButtonType.regular:
         return theme.isDarkTheme ? ThemeColors.white50 : theme.colorsTheme.disabled;

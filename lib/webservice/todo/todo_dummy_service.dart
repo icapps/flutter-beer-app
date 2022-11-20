@@ -1,8 +1,8 @@
-import 'package:flutter_template/di/environments.dart';
-import 'package:flutter_template/model/webservice/todo/todo.dart';
-import 'package:flutter_template/styles/theme_durations.dart';
-import 'package:flutter_template/util/api/dummy_api_util.dart';
-import 'package:flutter_template/webservice/todo/todo_service.dart';
+import 'package:beer_app/di/environments.dart';
+import 'package:beer_app/model/webservice/todo/todo.dart';
+import 'package:beer_app/styles/theme_durations.dart';
+import 'package:beer_app/util/api/dummy_api_util.dart';
+import 'package:beer_app/webservice/todo/todo_service.dart';
 import 'package:injectable/injectable.dart';
 
 @dummy

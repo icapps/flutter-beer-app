@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/screen/login/login_screen.dart';
-import 'package:flutter_template/styles/theme_data.dart';
-import 'package:flutter_template/util/env/flavor_config.dart';
-import 'package:flutter_template/util/keys.dart';
-import 'package:flutter_template/viewmodel/login/login_viewmodel.dart';
-import 'package:flutter_template/widget/general/styled/flutter_template_button.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/screen/login/login_screen.dart';
+import 'package:beer_app/styles/theme_data.dart';
+import 'package:beer_app/util/env/flavor_config.dart';
+import 'package:beer_app/util/keys.dart';
+import 'package:beer_app/viewmodel/login/login_viewmodel.dart';
+import 'package:beer_app/widget/general/styled/beer_app_button.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -38,8 +38,8 @@ void main() {
   testWidgets('Test login screen layout in dark mode', (tester) async {
     FlavorConfig.instance.themeMode = ThemeMode.dark;
 
-    final flutterTemplateTheme = getIt<FlutterTemplateTheme>();
-    flutterTemplateTheme.configureForThemeStyle(FlutterTemplateThemeStyle.dark);
+    final flutterTemplateTheme = getIt<BeerAppTheme>();
+    flutterTemplateTheme.configureForThemeStyle(BeerAppThemeStyle.dark);
     const sut = LoginScreen();
     final testWidget = await TestUtil.loadScreen(tester, sut);
 
@@ -62,7 +62,7 @@ void main() {
       const sut = LoginScreen();
       await TestUtil.loadScreen(tester, sut);
 
-      final finder = find.byType(FlutterTemplateButton);
+      final finder = find.byType(BeerAppButton);
       expect(finder, findsOneWidget);
       await tester.tap(finder);
       await tester.pumpAndSettle();
@@ -78,7 +78,7 @@ void main() {
       const sut = LoginScreen();
       await TestUtil.loadScreen(tester, sut);
 
-      final finder = find.byType(FlutterTemplateButton);
+      final finder = find.byType(BeerAppButton);
       expect(finder, findsOneWidget);
       await tester.tap(finder);
       await tester.pumpAndSettle();

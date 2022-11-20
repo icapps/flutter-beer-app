@@ -1,4 +1,4 @@
-import 'package:flutter_template/model/webservice/todo/todo.dart';
+import 'package:beer_app/model/webservice/todo/todo.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../../di/test_injectable.dart';

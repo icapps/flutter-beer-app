@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/main_common.dart';
-import 'package:flutter_template/navigator/main_navigator.dart';
-import 'package:flutter_template/repository/shared_prefs/local/local_storage.dart';
-import 'package:flutter_template/util/env/flavor_config.dart';
+import 'package:beer_app/main_common.dart';
+import 'package:beer_app/navigator/main_navigator.dart';
+import 'package:beer_app/repository/shared_prefs/local/local_storage.dart';
+import 'package:beer_app/util/env/flavor_config.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 import 'package:injectable/injectable.dart';
 

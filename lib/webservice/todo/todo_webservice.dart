@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_template/model/webservice/todo/todo.dart';
-import 'package:flutter_template/webservice/todo/todo_service.dart';
+import 'package:beer_app/model/webservice/todo/todo.dart';
+import 'package:beer_app/webservice/todo/todo_service.dart';
 import 'package:injectable/injectable.dart';
 import 'package:retrofit/retrofit.dart';
 

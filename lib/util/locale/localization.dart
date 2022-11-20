@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_template/util/locale/localization_keys.dart';
-import 'package:flutter_template/util/locale/localization_overrides.dart';
+import 'package:beer_app/util/locale/localization_keys.dart';
+import 'package:beer_app/util/locale/localization_overrides.dart';
 import 'package:sprintf/sprintf.dart';
 
 //============================================================//

@@ -1,7 +1,7 @@
-import 'package:flutter_template/model/webservice/todo/todo.dart';
-import 'package:flutter_template/navigator/main_navigator.dart';
-import 'package:flutter_template/repository/todo/todo_repository.dart';
-import 'package:flutter_template/util/locale/localization_keys.dart';
+import 'package:beer_app/model/webservice/todo/todo.dart';
+import 'package:beer_app/navigator/main_navigator.dart';
+import 'package:beer_app/repository/todo/todo_repository.dart';
+import 'package:beer_app/util/locale/localization_keys.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 import 'package:injectable/injectable.dart';
 

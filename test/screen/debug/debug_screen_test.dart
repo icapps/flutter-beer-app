@@ -1,8 +1,8 @@
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/screen/debug/debug_screen.dart';
-import 'package:flutter_template/util/keys.dart';
-import 'package:flutter_template/viewmodel/debug/debug_viewmodel.dart';
-import 'package:flutter_template/viewmodel/global/global_viewmodel.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/screen/debug/debug_screen.dart';
+import 'package:beer_app/util/keys.dart';
+import 'package:beer_app/viewmodel/debug/debug_viewmodel.dart';
+import 'package:beer_app/viewmodel/global/global_viewmodel.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 

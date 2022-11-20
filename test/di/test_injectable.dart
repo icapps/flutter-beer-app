@@ -3,32 +3,32 @@ import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:flutter_template/database/flutter_template_database.dart';
-import 'package:flutter_template/database/todo/todo_dao_storage.dart';
-import 'package:flutter_template/di/environments.dart';
-import 'package:flutter_template/di/injectable.config.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/navigator/main_navigator.dart';
-import 'package:flutter_template/repository/debug/debug_repository.dart';
-import 'package:flutter_template/repository/locale/locale_repository.dart';
-import 'package:flutter_template/repository/login/login_repository.dart';
-import 'package:flutter_template/repository/refresh/refresh_repository.dart';
-import 'package:flutter_template/repository/secure_storage/auth/auth_storage.dart';
-import 'package:flutter_template/repository/secure_storage/secure_storage.dart';
-import 'package:flutter_template/repository/shared_prefs/local/local_storage.dart';
-import 'package:flutter_template/repository/todo/todo_repository.dart';
-import 'package:flutter_template/styles/theme_data.dart';
-import 'package:flutter_template/util/env/flavor_config.dart';
-import 'package:flutter_template/util/locale/localization.dart';
-import 'package:flutter_template/viewmodel/debug/debug_platform_selector_viewmodel.dart';
-import 'package:flutter_template/viewmodel/debug/debug_viewmodel.dart';
-import 'package:flutter_template/viewmodel/global/global_viewmodel.dart';
-import 'package:flutter_template/viewmodel/license/license_viewmodel.dart';
-import 'package:flutter_template/viewmodel/login/login_viewmodel.dart';
-import 'package:flutter_template/viewmodel/splash/splash_viewmodel.dart';
-import 'package:flutter_template/viewmodel/todo/todo_add/todo_add_viewmodel.dart';
-import 'package:flutter_template/viewmodel/todo/todo_list/todo_list_viewmodel.dart';
-import 'package:flutter_template/webservice/todo/todo_service.dart';
+import 'package:beer_app/database/beer_app_database.dart';
+import 'package:beer_app/database/todo/todo_dao_storage.dart';
+import 'package:beer_app/di/environments.dart';
+import 'package:beer_app/di/injectable.config.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/navigator/main_navigator.dart';
+import 'package:beer_app/repository/debug/debug_repository.dart';
+import 'package:beer_app/repository/locale/locale_repository.dart';
+import 'package:beer_app/repository/login/login_repository.dart';
+import 'package:beer_app/repository/refresh/refresh_repository.dart';
+import 'package:beer_app/repository/secure_storage/auth/auth_storage.dart';
+import 'package:beer_app/repository/secure_storage/secure_storage.dart';
+import 'package:beer_app/repository/shared_prefs/local/local_storage.dart';
+import 'package:beer_app/repository/todo/todo_repository.dart';
+import 'package:beer_app/styles/theme_data.dart';
+import 'package:beer_app/util/env/flavor_config.dart';
+import 'package:beer_app/util/locale/localization.dart';
+import 'package:beer_app/viewmodel/debug/debug_platform_selector_viewmodel.dart';
+import 'package:beer_app/viewmodel/debug/debug_viewmodel.dart';
+import 'package:beer_app/viewmodel/global/global_viewmodel.dart';
+import 'package:beer_app/viewmodel/license/license_viewmodel.dart';
+import 'package:beer_app/viewmodel/login/login_viewmodel.dart';
+import 'package:beer_app/viewmodel/splash/splash_viewmodel.dart';
+import 'package:beer_app/viewmodel/todo/todo_add/todo_add_viewmodel.dart';
+import 'package:beer_app/viewmodel/todo/todo_list/todo_list_viewmodel.dart';
+import 'package:beer_app/webservice/todo/todo_service.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get_it/get_it.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
@@ -43,7 +43,7 @@ import 'test_injectable.config.dart';
 
 L getLocale<L>(BuildContext context) => getIt.get<Localization>() as L;
 
-T getTheme<T>(BuildContext context) => getIt.get<FlutterTemplateTheme>() as T; // ignore: avoid_as
+T getTheme<T>(BuildContext context) => getIt.get<BeerAppTheme>() as T; // ignore: avoid_as
 
 @InjectableInit(
   initializerName: r'$initTestGetIt',
@@ -80,7 +80,7 @@ Future<void> initTestInjectable() async {
 abstract class RegisterModule {
   @Environment(Environments.test)
   @singleton
-  FlutterTemplateDatabase get flutterTemplateDatabase => FlutterTemplateDatabase(NativeDatabase.memory());
+  BeerAppDatabase get flutterTemplateDatabase => BeerAppDatabase(NativeDatabase.memory());
 
   @Environment(Environments.test)
   @singleton

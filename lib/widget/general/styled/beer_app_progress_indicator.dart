@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/util/env/flavor_config.dart';
-import 'package:flutter_template/widget/provider/data_provider_widget.dart';
+import 'package:beer_app/util/env/flavor_config.dart';
+import 'package:beer_app/widget/provider/data_provider_widget.dart';
 
-class FlutterTemplateProgressIndicator extends StatelessWidget {
+class BeerAppProgressIndicator extends StatelessWidget {
   final bool dark;
 
-  const FlutterTemplateProgressIndicator({
+  const BeerAppProgressIndicator({
     required this.dark,
     super.key,
   });
 
-  const FlutterTemplateProgressIndicator.dark({Key? key})
+  const BeerAppProgressIndicator.dark({Key? key})
       : dark = true,
         super(key: key);
 
-  const FlutterTemplateProgressIndicator.light({Key? key})
+  const BeerAppProgressIndicator.light({Key? key})
       : dark = false,
         super(key: key);
 

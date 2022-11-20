@@ -1,9 +1,9 @@
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/model/exceptions/general_network_error.dart';
-import 'package:flutter_template/navigator/main_navigator.dart';
-import 'package:flutter_template/repository/login/login_repository.dart';
-import 'package:flutter_template/util/locale/localization_keys.dart';
-import 'package:flutter_template/viewmodel/login/login_viewmodel.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/model/exceptions/general_network_error.dart';
+import 'package:beer_app/navigator/main_navigator.dart';
+import 'package:beer_app/repository/login/login_repository.dart';
+import 'package:beer_app/util/locale/localization_keys.dart';
+import 'package:beer_app/viewmodel/login/login_viewmodel.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 import 'package:mockito/mockito.dart';
@@ -77,7 +77,7 @@ void main() {
         verifyNoMoreInteractions(navigator);
       });
 
-      test('LoginViewModel onLoginClicked with FlutterTemplateError', () async {
+      test('LoginViewModel onLoginClicked with BeerAppError', () async {
         expect(GeneralError(), isA<LocalizedError>());
         when(loginRepo.login(email: anyNamed('email'), password: anyNamed('password'))).thenThrow(GeneralError());
         await sut.onLoginClicked();

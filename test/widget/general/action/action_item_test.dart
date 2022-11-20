@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/styles/theme_assets.dart';
-import 'package:flutter_template/styles/theme_data.dart';
-import 'package:flutter_template/widget/general/action/action_item.dart';
+import 'package:beer_app/styles/theme_assets.dart';
+import 'package:beer_app/styles/theme_data.dart';
+import 'package:beer_app/widget/general/action/action_item.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../../di/test_injectable.dart';
@@ -12,7 +12,7 @@ void main() {
 
   testWidgets('ActionItem default state', (tester) async {
     final sut = Theme(
-      data: FlutterTemplateThemeData.lightTheme(TargetPlatform.android),
+      data: BeerAppThemeData.lightTheme(TargetPlatform.android),
       child: LayoutBuilder(
         builder: (context, constraint) => ActionItem(
           svgAsset: ThemeAssets.addIcon(context),
@@ -27,7 +27,7 @@ void main() {
 
   testWidgets('ActionItem with custom color', (tester) async {
     final sut = Theme(
-      data: FlutterTemplateThemeData.lightTheme(TargetPlatform.android),
+      data: BeerAppThemeData.lightTheme(TargetPlatform.android),
       child: LayoutBuilder(
         builder: (context, constraint) => ActionItem(
           svgAsset: ThemeAssets.addIcon(context),
@@ -45,7 +45,7 @@ void main() {
     var clicked = false;
 
     final sut = Theme(
-      data: FlutterTemplateThemeData.lightTheme(TargetPlatform.android),
+      data: BeerAppThemeData.lightTheme(TargetPlatform.android),
       child: LayoutBuilder(
         builder: (context, constraint) => ActionItem(
           svgAsset: ThemeAssets.addIcon(context),

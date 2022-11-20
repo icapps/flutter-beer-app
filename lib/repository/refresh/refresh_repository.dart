@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_template/model/exceptions/un_authorized_error.dart';
-import 'package:flutter_template/repository/secure_storage/auth/auth_storage.dart';
+import 'package:beer_app/model/exceptions/un_authorized_error.dart';
+import 'package:beer_app/repository/secure_storage/auth/auth_storage.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 import 'package:injectable/injectable.dart';
 import 'package:synchronized/synchronized.dart' as synchronized;

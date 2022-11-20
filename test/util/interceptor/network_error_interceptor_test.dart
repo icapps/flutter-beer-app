@@ -1,15 +1,15 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/model/exceptions/bad_request_error.dart';
-import 'package:flutter_template/model/exceptions/code_error.dart';
-import 'package:flutter_template/model/exceptions/forbidden_error.dart';
-import 'package:flutter_template/model/exceptions/general_error.dart';
-import 'package:flutter_template/model/exceptions/internal_server_error.dart';
-import 'package:flutter_template/model/exceptions/un_authorized_error.dart';
-import 'package:flutter_template/util/env/flavor_config.dart';
-import 'package:flutter_template/util/interceptor/network_error_interceptor.dart';
-import 'package:flutter_template/util/locale/localization_keys.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/model/exceptions/bad_request_error.dart';
+import 'package:beer_app/model/exceptions/code_error.dart';
+import 'package:beer_app/model/exceptions/forbidden_error.dart';
+import 'package:beer_app/model/exceptions/general_error.dart';
+import 'package:beer_app/model/exceptions/internal_server_error.dart';
+import 'package:beer_app/model/exceptions/un_authorized_error.dart';
+import 'package:beer_app/util/env/flavor_config.dart';
+import 'package:beer_app/util/interceptor/network_error_interceptor.dart';
+import 'package:beer_app/util/locale/localization_keys.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:icapps_architecture/icapps_architecture.dart';
 

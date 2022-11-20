@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/styles/theme_data.dart';
-import 'package:flutter_template/util/env/flavor_config.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/styles/theme_data.dart';
+import 'package:beer_app/util/env/flavor_config.dart';
 
 class TestThemeUtil {
   static void setDarkMode() {
     FlavorConfig.instance.themeMode = ThemeMode.dark;
-    final flutterTemplateTheme = getIt<FlutterTemplateTheme>();
-    flutterTemplateTheme.configureForThemeStyle(FlutterTemplateThemeStyle.dark);
+    final flutterTemplateTheme = getIt<BeerAppTheme>();
+    flutterTemplateTheme.configureForThemeStyle(BeerAppThemeStyle.dark);
   }
 
   static void setLightMode() {
     FlavorConfig.instance.themeMode = ThemeMode.light;
-    final flutterTemplateTheme = getIt<FlutterTemplateTheme>();
-    flutterTemplateTheme.configureForThemeStyle(FlutterTemplateThemeStyle.light);
+    final flutterTemplateTheme = getIt<BeerAppTheme>();
+    flutterTemplateTheme.configureForThemeStyle(BeerAppThemeStyle.light);
   }
 }

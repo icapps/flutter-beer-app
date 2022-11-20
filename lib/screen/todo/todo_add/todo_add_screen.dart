@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/navigator/route_names.dart';
-import 'package:flutter_template/styles/theme_dimens.dart';
-import 'package:flutter_template/viewmodel/todo/todo_add/todo_add_viewmodel.dart';
-import 'package:flutter_template/widget/general/styled/flutter_template_back_button.dart';
-import 'package:flutter_template/widget/general/styled/flutter_template_button.dart';
-import 'package:flutter_template/widget/general/styled/flutter_template_input_field.dart';
-import 'package:flutter_template/widget/general/theme_widget.dart';
-import 'package:flutter_template/widget/provider/provider_widget.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/navigator/route_names.dart';
+import 'package:beer_app/styles/theme_dimens.dart';
+import 'package:beer_app/viewmodel/todo/todo_add/todo_add_viewmodel.dart';
+import 'package:beer_app/widget/general/styled/beer_app_back_button.dart';
+import 'package:beer_app/widget/general/styled/beer_app_button.dart';
+import 'package:beer_app/widget/general/styled/beer_app_input_field.dart';
+import 'package:beer_app/widget/general/theme_widget.dart';
+import 'package:beer_app/widget/provider/provider_widget.dart';
 import 'package:scroll_when_needed/scroll_when_needed.dart';
 
 class TodoAddScreen extends StatefulWidget {
@@ -32,7 +32,7 @@ class TodoAddScreenState extends State<TodoAddScreen> {
             backgroundColor: theme.colorsTheme.background,
             appBar: AppBar(
               systemOverlayStyle: SystemUiOverlayStyle.light,
-              leading: FlutterTemplateBackButton.light(
+              leading: BeerAppBackButton.light(
                 onClick: viewModel.onBackClicked,
               ),
               title: Text(localization.todoAddTitle),
@@ -45,12 +45,12 @@ class TodoAddScreenState extends State<TodoAddScreen> {
                   physics: ScrollWhenNeededPhysics(targetPlatform: Theme.of(context).platform),
                   padding: const EdgeInsets.all(ThemeDimens.padding16),
                   children: [
-                    FlutterTemplateInputField(
+                    BeerAppInputField(
                       hint: localization.todoAddInputHint,
                       onChanged: viewModel.onTodoChanged,
                     ),
                     Container(height: ThemeDimens.padding16),
-                    FlutterTemplateButton(
+                    BeerAppButton(
                       text: localization.generalLabelSave,
                       isEnabled: viewModel.isSaveEnabled,
                       onClick: viewModel.onSaveClicked,

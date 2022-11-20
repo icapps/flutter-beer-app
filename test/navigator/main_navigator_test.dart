@@ -13,7 +13,7 @@ void main() {
   testWidgets('Test main navigator widget initial state', (tester) async {
     seedGlobalViewModel();
 
-    final testWidget = await TestUtil.loadFlutterTemplateApp(tester);
+    final testWidget = await TestUtil.loadBeerAppApp(tester);
     await TestUtil.takeScreenshotForAllSizes(tester, testWidget, 'main_navigator_initial_screen');
   });
 }

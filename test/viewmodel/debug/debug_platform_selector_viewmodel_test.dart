@@ -1,5 +1,5 @@
-import 'package:flutter_template/navigator/main_navigator.dart';
-import 'package:flutter_template/viewmodel/debug/debug_platform_selector_viewmodel.dart';
+import 'package:beer_app/navigator/main_navigator.dart';
+import 'package:beer_app/viewmodel/debug/debug_platform_selector_viewmodel.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 

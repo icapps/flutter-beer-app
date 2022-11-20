@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/navigator/route_names.dart';
-import 'package:flutter_template/screen/debug/debug_screen.dart';
-import 'package:flutter_template/screen/todo/todo_list/todo_list_screen.dart';
-import 'package:flutter_template/util/extension/localization_extension.dart';
-import 'package:flutter_template/widget/general/theme_widget.dart';
-import 'package:flutter_template/widget/provider/data_provider_widget.dart';
+import 'package:beer_app/navigator/route_names.dart';
+import 'package:beer_app/screen/debug/debug_screen.dart';
+import 'package:beer_app/screen/todo/todo_list/todo_list_screen.dart';
+import 'package:beer_app/util/extension/localization_extension.dart';
+import 'package:beer_app/widget/general/theme_widget.dart';
+import 'package:beer_app/widget/provider/data_provider_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = RouteNames.homeScreen;

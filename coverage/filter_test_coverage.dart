@@ -100,8 +100,8 @@ List<String> getFilteredBody(List<String> body, List<String> lines) {
 const excludedLines = [
   'AppConstants._();',
   'EnvUtils._();',
-  'FlutterTemplateLogger._();',
-  'FlutterTemplateThemeData._();',
+  'BeerAppLogger._();',
+  'BeerAppThemeData._();',
   'Keys._();',
   'LicenseUtil._();',
   'ThemeAssets._();',

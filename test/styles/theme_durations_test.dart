@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/styles/theme_durations.dart';
-import 'package:flutter_template/util/env/flavor_config.dart';
+import 'package:beer_app/styles/theme_durations.dart';
+import 'package:beer_app/util/env/flavor_config.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

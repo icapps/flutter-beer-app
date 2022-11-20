@@ -1,9 +1,9 @@
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/screen/todo/todo_add/todo_add_screen.dart';
-import 'package:flutter_template/util/keys.dart';
-import 'package:flutter_template/viewmodel/todo/todo_add/todo_add_viewmodel.dart';
-import 'package:flutter_template/widget/general/styled/flutter_template_button.dart';
-import 'package:flutter_template/widget/general/styled/flutter_template_input_field.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/screen/todo/todo_add/todo_add_screen.dart';
+import 'package:beer_app/util/keys.dart';
+import 'package:beer_app/viewmodel/todo/todo_add/todo_add_viewmodel.dart';
+import 'package:beer_app/widget/general/styled/beer_app_button.dart';
+import 'package:beer_app/widget/general/styled/beer_app_input_field.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
@@ -74,7 +74,7 @@ void main() {
       const sut = TodoAddScreen();
       await TestUtil.loadScreen(tester, sut);
 
-      final finder = find.byType(FlutterTemplateButton);
+      final finder = find.byType(BeerAppButton);
       expect(finder, findsOneWidget);
       await tester.tap(finder);
       await tester.pumpAndSettle();
@@ -88,7 +88,7 @@ void main() {
       const sut = TodoAddScreen();
       await TestUtil.loadScreen(tester, sut);
 
-      final finder = find.byType(FlutterTemplateButton);
+      final finder = find.byType(BeerAppButton);
       expect(finder, findsOneWidget);
       await tester.tap(finder);
       await tester.pumpAndSettle();
@@ -101,7 +101,7 @@ void main() {
       const sut = TodoAddScreen();
       await TestUtil.loadScreen(tester, sut);
 
-      final finder = find.byType(FlutterTemplateInputField);
+      final finder = find.byType(BeerAppInputField);
       expect(finder, findsOneWidget);
       await tester.tap(finder);
       await tester.pumpAndSettle();

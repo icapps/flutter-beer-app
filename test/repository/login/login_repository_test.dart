@@ -1,6 +1,6 @@
-import 'package:flutter_template/di/injectable.dart';
-import 'package:flutter_template/repository/login/login_repository.dart';
-import 'package:flutter_template/repository/secure_storage/auth/auth_storage.dart';
+import 'package:beer_app/di/injectable.dart';
+import 'package:beer_app/repository/login/login_repository.dart';
+import 'package:beer_app/repository/secure_storage/auth/auth_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
