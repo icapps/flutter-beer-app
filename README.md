@@ -436,6 +436,18 @@ Otherwise you can return the beer from the new beer page and add it to the list 
 
 The app already contains code for theming and light/dark mode. Add some new colors to the theme and use them in the app. You can also add a button to switch between light and dark mode.
 
+### Icons
+
+To add your own launch icons, replace the files in assets_launcher_icons/.
+
+You can also change the adaptive_icon_background in the flutter_launcher_icons-{flavor}.yaml (currently "#CB2E63") (only available for Android 8.0 devices and above)
+
+After this, run the following command
+
+```dart
+fvm flutter pub run flutter_launcher_icons:main -f flutter_launcher_icons-dev.yaml
+```
+
 ### Tests
 
 You will notice that there are quite a few tests in the project. You can run the tests by running `fvm flutter test` in the root of the project. Since you've added a lot of new code, the current tests will likely fail. Try to fix the tests and add new tests for the new code you've added.
