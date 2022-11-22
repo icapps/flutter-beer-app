@@ -12,7 +12,7 @@ Future<void> main() async {
   await wrapMain(() async {
     await initNiddler();
     const values = FlavorValues(
-      baseUrl: 'https://jsonplaceholder.typicode.com/',
+      baseUrl: 'https://icapps-nodejs-beers-api.herokuapp.com/api/v1/',
       logNetworkInfo: true,
       showFullErrorMessages: true,
     );
