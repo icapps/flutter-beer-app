@@ -8,7 +8,7 @@ import 'package:beer_app/util/env/flavor_config.dart';
 Future<void> main() async {
   await wrapMain(() async {
     const values = FlavorValues(
-      baseUrl: 'https://jsonplaceholder.typicode.com/',
+      baseUrl: 'https://icapps-nodejs-beers-api.herokuapp.com/api/v1/',
       logNetworkInfo: false,
       showFullErrorMessages: true,
     );
