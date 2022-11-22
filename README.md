@@ -294,6 +294,16 @@ LoginResponse:
 
 Running `tool/model_generator.sh` will then generate the `LoginResponse` model. This model contains the `access_token` and `refresh_token` fields. These are the fields that we need to store in the `LocalStorage`. It will also generate JSON convertion code for this model.
 
+Do the same for the Login Request model which has the following parameters
+
+```json
+{
+  "username": "string",
+  "password": "string",
+  "deviceId": "string"
+}
+```
+
 *Note: For more information about the `config.yaml` file and model generation, take a look at [model_generator](https://pub.dev/packages/model_generator).*
 
 *Note: If the model_generator script ends with `pub finished with exit code 65` you need to run `./tool/build_runner_build.sh` manually. `model_generator` will try to run build_runner, but uses the default flutter instance and not fvm. So if these are incompatible the model_generator will show an error. Model generator will still be successful regardless of this (unless you see a different error ofcourse).*
@@ -302,7 +312,7 @@ Now we can create our abstract class for the `LoginRepository`. Create a new fil
 
 ```dart
 abstract class LoginService {
-  Future<LoginResponse> login(String email, String password);
+  Future<LoginResponse> login(LoginRequest request);
 }
 ```
 
@@ -319,13 +329,11 @@ abstract class LoginWebService extends LoginService {
 
   @override
   @POST('/login')
-  Future<LoginResponse> login(String email, String password);
+  Future<LoginResponse> login(@Body LoginRequest request);
 }
 ```
 
 You need to rerun the `tool/build_runner_build.sh` script to generate the `_LoginWebService` class which includes the actual API code.
-
-TODO: Update body and endpoint
 
 The final step is to add the `LoginService` to the `LoginRepository`. By now you should know how to add the service to the repository. If not, look at `AuthStorage` inside the `LoginRepository` class.
 
