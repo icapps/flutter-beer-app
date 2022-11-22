@@ -328,7 +328,7 @@ abstract class LoginWebService extends LoginService {
   factory LoginWebService(Dio dio) = _LoginWebService;
 
   @override
-  @POST('/login')
+  @POST('/auth/login')
   Future<LoginResponse> login(@Body LoginRequest request);
 }
 ```
