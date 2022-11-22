@@ -25,7 +25,7 @@ Run `./tool/install_fvm.sh` to install `fvm`.
 
 ### Swagger API
 
-The API is available at [TODO](TODO).
+The API is available at [API DOCUMENTATION](https://icapps-nodejs-beers-api.herokuapp.com/api/v1/documentation/#/).
 
 ### Login
 
