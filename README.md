@@ -117,6 +117,14 @@ if (result) {
 }
 ```
 
+And add a dependency for `_loginRepo` by adding a field `final LoginRepository _loginRepo` and adding it to the constructor. Then rerun build_runner build:
+
+```bash
+fvm flutter pub run build_runner build
+```
+
+Or run the script `./tool/build_runner_build.sh` which will run the command for you.
+
 Run the app and you should see the `LoginScreen` widget.
 
 ![Empty login screen](/assets_workshop/login_v1.png)
@@ -237,9 +245,9 @@ Before we continue, we need to update our injectable file. This is automatically
 fvm flutter pub run build_runner build
 ```
 
-Or run the script `./tool/build_runner.sh` which will run the command for you.
+Or run the script `./tool/build_runner_build.sh` which will run the command for you.
 
-To update `_password` and `_email` we can use the `onChanged` callback of the `BeerAppInputField` widgets. Add the following code to the `LoginScreen` widget:
+To update `_password` and `_email` we can use the `onChanged` callback of the `BeerAppInputField` widgets, we will first provide a method for this and later on add it to the `LoginScreen` widget.
 
 ```dart
   void onEmailUpdated(String email) {
