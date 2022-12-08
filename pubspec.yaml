@@ -86,3 +86,6 @@ icapps_translations:
 
 license_generator:
   check_before_generate: true
+
+model_generator:
+  use_fvm: true
