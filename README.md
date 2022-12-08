@@ -337,7 +337,7 @@ abstract class LoginWebService extends LoginService {
 
   @override
   @POST('/auth/login')
-  Future<LoginResponse> login(@Body LoginRequest request);
+  Future<LoginResponse> login(@Body() LoginRequest request);
 }
 ```
 
