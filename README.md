@@ -293,11 +293,15 @@ You can expand the login screen with more functionality. For example show a load
 We are almost complete with the login, the next step is to add the login call. API calls contain a lot of boiler plate, so for this step we will use quite a lot of code generation. First is the response model. Open `config.yaml` and add the following code:
 
 ```yaml
-LoginResponse:
+LoginResponseData:
   path: webservice/login
   properties:
     access_token: string
     refresh_token: string
+LoginResponse:
+  path: webservice/login
+  properties:
+    data: LoginResponseData
 ```
 
 Running `tool/model_generator.sh` will then generate the `LoginResponse` model. This model contains the `access_token` and `refresh_token` fields. These are the fields that we need to store in the `LocalStorage`. It will also generate JSON convertion code for this model.
