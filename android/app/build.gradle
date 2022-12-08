@@ -48,12 +48,6 @@ android {
   }
 
   signingConfigs {
-    debug {
-      storeFile file("../keystore/debug.keystore")
-      storePassword "your-store-alias"
-      keyAlias "your-key-alias"
-      keyPassword "your-key-password"
-    }
     release {
       storeFile file("../keystore/release.keystore")
       storePassword "your-store-alias"
@@ -106,6 +100,3 @@ dependencies {
   androidTestImplementation 'androidx.test.ext:junit:1.1.1'
   androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
 }
-
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
