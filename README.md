@@ -296,15 +296,15 @@ We are almost complete with the login, the next step is to add the login call. A
 LoginResponseData:
   path: webservice/login
   properties:
-    access_token: string
-    refresh_token: string
+    accessToken: string
+    refreshToken: string
 LoginResponse:
   path: webservice/login
   properties:
     data: LoginResponseData
 ```
 
-Running `tool/model_generator.sh` will then generate the `LoginResponse` model. This model contains the `access_token` and `refresh_token` fields. These are the fields that we need to store in the `LocalStorage`. It will also generate JSON convertion code for this model.
+Running `tool/model_generator.sh` will then generate the `LoginResponse` model. This model contains the `accessToken` and `refreshToken` fields. These are the fields that we need to store in the `LocalStorage`. It will also generate JSON convertion code for this model.
 
 Do the same for the Login Request model which has the following parameters
 
