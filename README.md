@@ -349,7 +349,7 @@ Try to implement the `login` function of the `LoginRepository` yourself. In the 
 
 ```dart
 Future<void> login({required String email, required String password}) async {
-  final tokens = await _loginService.login(email, password);
+  final tokens = await _loginService.login(LoginRequest(username: email, password: password, deviceId: 'MYDEVICE'));
   await _storage.saveUserCredentials(accessToken: tokens.accessToken, refreshToken: tokens.refreshToken);
 }
 ```
