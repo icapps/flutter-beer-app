@@ -54,7 +54,7 @@ bool updateAppTheme() {
     themeMode = localStorage.getThemeMode()!;
   }
   if (themeMode == ThemeMode.system) {
-    final brightness = getIt.get<Brightness>();
+    final brightness = Brightness.light;
     themeMode = (brightness == Brightness.dark) ? ThemeMode.dark : ThemeMode.light;
   }
   return flutterTemplateTheme.configureForThemeStyle(themeMode == ThemeMode.dark ? BeerAppThemeStyle.dark : BeerAppThemeStyle.light);
