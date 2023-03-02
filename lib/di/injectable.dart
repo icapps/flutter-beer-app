@@ -6,7 +6,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:beer_app/database/beer_app_database.dart';
-import 'package:beer_app/di/db/setup_drift_none.dart' if (dart.library.io) 'package:beer_app/di/db/setup_drift_io.dart' if (dart.library.js) 'package:beer_app/di/db/setup_drift_web.dart';
+import 'package:beer_app/di/db/setup_drift_none.dart' 
+    if (dart.library.io) 'package:beer_app/di/db/setup_drift_io.dart' 
+    if (dart.library.js) 'package:beer_app/di/db/setup_drift_web.dart';
 import 'package:beer_app/di/injectable.config.dart';
 import 'package:beer_app/main_common.dart';
 import 'package:beer_app/navigator/middle_ware/init_middle_ware.dart';
