@@ -57,7 +57,8 @@ abstract class RegisterModule {
   Localization localization() => Localization();
 
   @lazySingleton
-  SharedPreferenceStorage sharedPreferences(SharedPreferences preferences) => SharedPreferenceStorage(preferences);
+  SharedPreferenceStorage sharedPreferences(SharedPreferences preferences) =>
+      SharedPreferenceStorage(preferences);
 
   @singleton
   ConnectivityHelper connectivityHelper() => ConnectivityHelper();
@@ -72,16 +73,14 @@ abstract class RegisterModule {
   FlutterSecureStorage storage() => const FlutterSecureStorage();
 
   @lazySingleton
-  SimpleKeyValueStorage keyValueStorage(SharedPreferenceStorage preferences, SecureStorage secure) {
+  SimpleKeyValueStorage keyValueStorage(
+      SharedPreferenceStorage preferences, SecureStorage secure) {
     if (kIsWeb) return preferences;
     return secure;
   }
 
   @lazySingleton
   BeerAppTheme theme() => BeerAppTheme();
-
-  @injectable
-  Brightness brightness() => MediaQueryData.fromWindow(WidgetsBinding.instance.window).platformBrightness;
 
   @lazySingleton
   CombiningSmartInterceptor provideCombiningSmartInterceptor(
@@ -107,9 +106,12 @@ abstract class RegisterModule {
   }
 
   @lazySingleton
-  BeerAppDatabase provideBeerAppDatabase(DatabaseConnection databaseConnection) => BeerAppDatabase.connect(databaseConnection);
+  BeerAppDatabase provideBeerAppDatabase(
+          DatabaseConnection databaseConnection) =>
+      BeerAppDatabase.connect(databaseConnection);
 }
 
 dynamic _parseAndDecode(String response) => jsonDecode(response);
 
-dynamic parseJson(String text) => compute<String, dynamic>(_parseAndDecode, text);
+dynamic parseJson(String text) =>
+    compute<String, dynamic>(_parseAndDecode, text);
